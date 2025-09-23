@@ -83,7 +83,7 @@ const App: React.FC = () => {
   }, [paginatedResources, generateDescription]);
 
   return (
-    <div className="bg-gray-900 text-gray-200 min-h-screen font-sans">
+    <div className="bg-[#0c0a24] text-gray-200 min-h-screen font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Header />
         <Sidebar
@@ -115,11 +115,11 @@ const App: React.FC = () => {
             </>
           ) : (
             <div className="flex flex-col items-center justify-center h-full text-center text-gray-500 mt-16">
-              <svg className="w-16 h-16 mb-4 text-emerald-400/20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-16 h-16 mb-4 text-fuchsia-500/20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <h2 className="text-2xl font-semibold text-gray-300">No Results Found</h2>
-              <p className="mt-2 text-gray-400">Try adjusting your search or category filter.</p>
+              <h2 className="text-2xl font-semibold text-gray-300 font-orbitron">No Results Found</h2>
+              <p className="mt-2 text-gray-400 font-roboto-mono">Try adjusting your search or category filter.</p>
             </div>
           )}
         </main>

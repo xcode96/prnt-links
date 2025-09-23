@@ -12,11 +12,11 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPage
   }
 
   return (
-    <div className="flex justify-center items-center space-x-4 mt-12">
+    <div className="flex justify-center items-center space-x-4 mt-12 font-roboto-mono">
       <button
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
-        className="px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-sm font-medium text-gray-300 hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+        className="px-4 py-2 bg-indigo-900/50 border border-blue-900 rounded-lg text-sm font-medium text-blue-300 hover:bg-indigo-800/60 hover:border-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         aria-label="Go to previous page"
       >
         Previous
@@ -29,7 +29,7 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPage
       <button
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
-        className="px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-sm font-medium text-gray-300 hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+        className="px-4 py-2 bg-indigo-900/50 border border-blue-900 rounded-lg text-sm font-medium text-blue-300 hover:bg-indigo-800/60 hover:border-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         aria-label="Go to next page"
       >
         Next
