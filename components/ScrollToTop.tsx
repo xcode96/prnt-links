@@ -30,7 +30,7 @@ const ScrollToTop: React.FC = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="p-3 bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-white rounded-full shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 focus:ring-offset-gray-900 transition-all duration-300"
+          className="p-3 bg-emerald-500 text-white rounded-full shadow-lg hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 focus:ring-offset-gray-900 transition-all duration-300"
           aria-label="Scroll to top"
         >
           <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">

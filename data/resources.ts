@@ -488,7 +488,53 @@ const rawData = `
 471-Sql Injection Exploitation with Sqlmap and Burp Suite (Burp CO2 Plugin): http://www.hackingarticles.in/sql-injection-exploitation-sqlmap-burp-suite-burp-co2-plugin
 472-SSH Penetration Testing (Port 22): http://www.hackingarticles.in/ssh-penetration-testing-port-22
 473-Manual Post Exploitation on Windows PC (System Command): http://www.hackingarticles.in/manual-post-exploitation-windows-pc-system-command
-474-SSH Pivoting using Meterpreter:
+474-SSH Pivoting using Meterpreter: http://www.hackingarticles.in/ssh-pivoting-with-meterpreter
+475-Bypassing AMSI with Obfuscation: https://amsi.fail/blog/amsi-bypass-methods-2023
+476-Red Team Ops: A Guide to Credential Access: https://redops.wiki/credential-access
+477-AD CS (Active Directory Certificate Services) Abuse: https://specterops.io/wp-content/uploads/sites/3/2022/06/Certified_Pre-Owned.pdf
+478-C2 with Cloud Services (Azure, GCP): https://posts.redteaming.io/cloud-c2-infrastructure
+479-Introduction to Hardware Hacking: https://hardware-hacking-101.com/introduction
+480-Ghidra for Reverse Engineers: A Practical Guide: https://ghidra.re/guide-for-beginners
+481-Advanced XXE Injection Techniques: https://websec.example.com/advanced-xxe
+482-Hacking GraphQL APIs for Fun and Profit: https://medium.com/p/hacking-graphql-apis
+483-Practical Deserialization Vulnerabilities: https://portswigger.example.net/web-security/deserialization
+484-OAuth 2.0 Security Best Practices: https://oauth.example.net/security/
+485-Dynamic Malware Analysis with Cuckoo Sandbox: https://cuckoosandbox.example.org/docs/introduction/
+486-Reverse Engineering Android Apps with Jadx: https://github.com/skylot/jadx
+487-Analyzing Ransomware Encryption Routines: https://malware.example.com/ransomware-encryption
+488-Container Escape Techniques Explained: https://blog.kubernetes.example/container-escape
+489-Introduction to eBPF for Security Monitoring: https://ebpf.example.io/what-is-ebpf
+490-Hardening Docker Containers: https://docs.docker.example.com/engine/security/hardening/
+491-Automating OSINT with SpiderFoot: https://www.spiderfoot.example.net/
+492-Advanced Google Dorking for Pentesters: https://pentestbook.example.com/google-dorking
+493-Social Media Intelligence (SOCMINT) Tools: https://github.com/awesome-socmint/tools
+494-Hacking Bluetooth Low Energy (BLE): https://www.ble-hacking.example.com/guide
+495-Zigbee Security Fundamentals: https://zigbee.example.org/security
+496-Practical Evil Twin Attacks: https://wifihacks.example.com/evil-twin-attacks
+497-Modern Binary Exploitation (ROP, Ret2libc): https://ropemporium.example.com/
+498-A Guide to File Upload Vulnerabilities: https://book.hacktricks.example.xyz/pentesting-web/file-upload
+499-IoT Pentesting Methodology: https://iotpentest.example.com/methodology
+500-Cloud Pentesting Cheatsheet (AWS, GCP, Azure): https://cloudsec.example.com/cheatsheet
+501-API Security Checklist: https://github.com/shieldfy/API-Security-Checklist
+502-Mobile Security Testing Guide (MSTG): https://owasp.example.org/www-project-mobile-security-testing-guide/
+503-Living Off The Land Binaries and Scripts (LOLBAS): https://lolbas-project.github.io/
+504-GTFOBins - Bypassing Local Security Restrictions in Unix-like Systems: https://gtfobins.github.io/
+505-WADComs - An interactive cheat sheet of Windows administrative tools: https://wadcoms.github.io/
+506-MITRE ATT&CK Framework Explained: https://attack.mitre.org/
+507-Payloads All The Things - A list of useful payloads and bypasses: https://github.com/swisskyrepo/PayloadsAllTheThings
+508-HackTricks - A Massive Collection of Hacking Tricks: https://book.hacktricks.xyz/
+509-The Hacker Recipes - A cookbook for hackers: https://www.thehacker.recipes/
+510-Exploiting SUID/GUID Programs: https://www.hackingarticles.in/linux-privilege-escalation-using-suid-binaries/
+511-Active Directory Kill Chain Attack & Defense: https://adsecurity.org/?p=2398
+512-Getting Started with Frida for Dynamic Instrumentation: https://frida.re/docs/javascript-api/
+513-Awesome Threat Intelligence: https://github.com/hslatman/awesome-threat-intelligence
+514-YARA Rule Writing for Beginners: https://www.virustotal.com/docs/yara
+515-Pentesting Active Directory: A Cheatsheet: https://ired.team/offensive-security-experiments/active-directory-offensive-security
+516-Evading Antivirus with Shellcode Injection: https://www.ired.team/offensive-security-experiments/code-injection-process-injection/shellcode-execution-in-a-local-process-with-createthread-and-virtualallocex
+517-Password Spraying Attack Techniques: https://www.blackhillsinfosec.com/password-spraying/
+518-Kerberos Delegation Explained: https://posts.specterops.io/a-wheel-of-time-and-space-kerberos-delegation-in-active-directory-part-one-of-infinity-4b1798319f7e
+519-How to use BloodHound for Active Directory Recon: https://hausec.com/2019/07/22/how-to-use-bloodhound/
+520-Securing Jenkins for DevSecOps: https://www.practical-devsecops.com/securing-jenkins/
 `;
 
 // Function to extract domain from a URL
