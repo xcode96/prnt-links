@@ -1,4 +1,3 @@
-
 export interface Resource {
   id: number;
   title: string;
@@ -6,4 +5,5 @@ export interface Resource {
   category: string;
   domain: string;
   description?: string;
+  tags?: string[];
 }

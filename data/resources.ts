@@ -491,7 +491,7 @@ const rawData = `
 474-SSH Pivoting using Meterpreter: http://www.hackingarticles.in/ssh-pivoting-with-meterpreter
 475-Bypassing AMSI with Obfuscation: https://amsi.fail/blog/amsi-bypass-methods-2023
 476-Red Team Ops: A Guide to Credential Access: https://redops.wiki/credential-access
-477-AD CS (Active Directory Certificate Services) Abuse: https://specterops.io/wp-content/uploads/sites/3/2022/06/Certified_Pre-Owned.pdf
+477-AD CS (Active Directory Certificate Services) Abuse: https://specterops.io/wp-content/uploads/sites/3/2022/6/Certified_Pre-Owned.pdf
 478-C2 with Cloud Services (Azure, GCP): https://posts.redteaming.io/cloud-c2-infrastructure
 479-Introduction to Hardware Hacking: https://hardware-hacking-101.com/introduction
 480-Ghidra for Reverse Engineers: A Practical Guide: https://ghidra.re/guide-for-beginners
@@ -547,7 +547,6 @@ const getDomain = (url: string): string => {
     const domain = new URL(fullUrl).hostname;
     return domain.replace(/^www\./, '');
   } catch (error) {
-    // Fallback for malformed URLs that might not have a protocol but are domain/path
     const parts = url.split('/');
     if (parts.length > 0 && parts[0].includes('.')) {
       return parts[0].replace(/^www\./, '');
@@ -557,7 +556,6 @@ const getDomain = (url: string): string => {
   }
 };
 
-// Function to assign category based on keywords in the title
 const getCategory = (title: string): string => {
   const lowerTitle = title.toLowerCase();
 
@@ -601,35 +599,53 @@ const getCategory = (title: string): string => {
 const parseResources = (data: string): Resource[] => {
   const lines = data.trim().split('\n');
   const resources: Resource[] = [];
+  const seenIds = new Set<number>();
 
   for (const line of lines) {
     const trimmedLine = line.trim();
     if (!trimmedLine) continue;
     
-    const match = trimmedLine.match(/^(\d+)-/);
+    const match = trimmedLine.match(/^(\d+)-{1,2}\s?/);
     if (!match) {
         console.warn(`Line does not start with a number-hyphen pattern: "${trimmedLine}"`);
         continue;
     }
     
     const id = parseInt(match[1], 10);
+    if (seenIds.has(id)) {
+        // Skip duplicate IDs to avoid key errors in React
+        continue;
+    }
+    seenIds.add(id);
+
     const content = trimmedLine.substring(match[0].length).trim();
     
-    const lastColonIndex = content.lastIndexOf(':');
-    
-    // Ensure the colon is not part of a protocol like 'http:' and there's content after it
-    if (lastColonIndex === -1 || content.substring(lastColonIndex + 1).trim().length < 5 || content.substring(lastColonIndex-4, lastColonIndex) === 'http') {
+    // Improved split logic: find the last occurrence of ':', but check if it's part of a URL scheme
+    let splitIndex = content.lastIndexOf(':');
+    while(splitIndex > -1) {
+        const afterColon = content.substring(splitIndex + 1).trim();
+        const potentialProtocol = content.substring(0, splitIndex).trim().slice(-5).toLowerCase();
+        
+        // If "http" is right before the colon, it's likely part of a URL. Keep searching.
+        if (potentialProtocol.includes('http') || afterColon.length < 5) {
+            splitIndex = content.lastIndexOf(':', splitIndex - 1);
+        } else {
+            break;
+        }
+    }
+
+    if (splitIndex === -1) {
         console.warn(`Could not reliably split title and URL: "${trimmedLine}"`);
         continue;
     }
+    
+    let title = content.substring(0, splitIndex).trim();
+    let url = content.substring(splitIndex + 1).trim();
 
-    let title = content.substring(0, lastColonIndex).trim();
-    let url = content.substring(lastColonIndex + 1).trim();
-
-    // Clean up title if it starts with a colon from malformed entries
     if (title.startsWith(':')) {
       title = title.substring(1).trim();
     }
+    if (!url) continue;
 
     const fullUrl = url.startsWith('http') || url.startsWith('//') ? url : `https://${url}`;
 

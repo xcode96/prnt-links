@@ -1,32 +1,47 @@
 import React, { useState, useMemo, useEffect, useCallback } from 'react';
-import { GoogleGenAI } from "@google/genai";
+import { GoogleGenAI, Type, Chat } from "@google/genai";
+
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import LinkCard from './components/LinkCard';
 import ScrollToTop from './components/ScrollToTop';
 import Pagination from './components/Pagination';
 import Modal from './components/Modal';
+import Dashboard from './components/Dashboard';
+import ChatAssistant from './components/ChatAssistant';
+import SubmissionForm from './components/SubmissionForm';
+import { ChatIcon } from './components/icons';
+
 import allResources from './data/resources';
 import { Resource } from './types';
+import { CATEGORIES } from './constants';
 
 const ITEMS_PER_PAGE = 24;
 
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const aiChatModel = ai.chats.create({ model: 'gemini-2.5-flash' });
 
 const App: React.FC = () => {
+  // Core State
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
-  const [descriptions, setDescriptions] = useState<Record<number, string>>({});
-  const [loadingDescriptions, setLoadingDescriptions] = useState<Record<number, boolean>>({});
   
-  // New features state
+  // AI-Generated Content State
+  const [descriptions, setDescriptions] = useState<Record<number, string>>({});
+  const [tags, setTags] = useState<Record<number, string[]>>({});
+  const [loadingDetails, setLoadingDetails] = useState<Record<number, boolean>>({});
+
+  // UI & Feature State
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
   const [savedItems, setSavedItems] = useState<Set<number>>(new Set());
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isDiscoverModalOpen, setIsDiscoverModalOpen] = useState(false);
   const [randomResource, setRandomResource] = useState<Resource | null>(null);
+  const [view, setView] = useState<'Hub' | 'Dashboard'>('Hub');
+  const [isChatOpen, setIsChatOpen] = useState(false);
+  const [isSubmitOpen, setIsSubmitOpen] = useState(false);
 
-  // Theme management
+  // Theme Management
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -35,65 +50,50 @@ const App: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
+    document.documentElement.classList.toggle('dark', theme === 'dark');
     localStorage.setItem('theme', theme);
   }, [theme]);
 
-  const toggleTheme = () => {
-    setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
-  };
+  const toggleTheme = () => setTheme(prev => (prev === 'light' ? 'dark' : 'light'));
 
-  // Saved items management
+  // Saved Items Management
   useEffect(() => {
     try {
       const saved = localStorage.getItem('savedResources');
-      if (saved) {
-        setSavedItems(new Set(JSON.parse(saved)));
-      }
+      if (saved) setSavedItems(new Set(JSON.parse(saved)));
     } catch (error) {
       console.error("Could not load saved resources:", error);
-      setSavedItems(new Set());
     }
   }, []);
 
   const toggleSaveItem = (id: number) => {
-    setSavedItems(prevSavedItems => {
-      const newSavedItems = new Set(prevSavedItems);
-      if (newSavedItems.has(id)) {
-        newSavedItems.delete(id);
-      } else {
-        newSavedItems.add(id);
-      }
-      localStorage.setItem('savedResources', JSON.stringify(Array.from(newSavedItems)));
-      return newSavedItems;
+    setSavedItems(prev => {
+      const newSaved = new Set(prev);
+      if (newSaved.has(id)) newSaved.delete(id);
+      else newSaved.add(id);
+      localStorage.setItem('savedResources', JSON.stringify(Array.from(newSaved)));
+      return newSaved;
     });
   };
 
+  // Data Filtering & Pagination
   const filteredResources = useMemo(() => {
-    const normalizedSearchQuery = searchQuery.trim().toLowerCase();
-
-    let resourcesToFilter = allResources;
-
-    if (selectedCategory === 'Saved') {
-      resourcesToFilter = allResources.filter(resource => savedItems.has(resource.id));
-    } else if (selectedCategory !== 'All') {
-      resourcesToFilter = allResources.filter(resource => resource.category === selectedCategory);
-    }
+    const normalizedQuery = searchQuery.trim().toLowerCase();
     
-    if (!normalizedSearchQuery) {
-        return resourcesToFilter;
-    }
+    let resources = selectedCategory === 'Saved'
+      ? allResources.filter(r => savedItems.has(r.id))
+      : selectedCategory === 'All'
+        ? allResources
+        : allResources.filter(r => r.category === selectedCategory);
 
-    return resourcesToFilter.filter((resource: Resource) => {
-      const searchMatch = resource.title.toLowerCase().includes(normalizedSearchQuery) || 
-                          resource.domain.toLowerCase().includes(normalizedSearchQuery);
-      return searchMatch;
-    });
-  }, [selectedCategory, searchQuery, savedItems]);
+    if (!normalizedQuery) return resources;
+
+    return resources.filter(r => 
+      r.title.toLowerCase().includes(normalizedQuery) ||
+      r.domain.toLowerCase().includes(normalizedQuery) ||
+      (tags[r.id] && tags[r.id].some(tag => `#${tag}`.includes(normalizedQuery)))
+    );
+  }, [selectedCategory, searchQuery, savedItems, tags]);
 
   useEffect(() => {
     setCurrentPage(1);
@@ -106,104 +106,150 @@ const App: React.FC = () => {
     return filteredResources.slice(startIndex, startIndex + ITEMS_PER_PAGE);
   }, [currentPage, filteredResources]);
 
-  const generateDescription = useCallback(async (resource: Resource) => {
-    if (!resource || descriptions[resource.id] || loadingDescriptions[resource.id]) {
-      return;
-    }
+  // AI Content Generation
+  const generateDetails = useCallback(async (resource: Resource) => {
+    if (!resource || descriptions[resource.id] || loadingDetails[resource.id]) return;
 
+    setLoadingDetails(prev => ({ ...prev, [resource.id]: true }));
     try {
-      setLoadingDescriptions(prev => ({ ...prev, [resource.id]: true }));
-      const prompt = `Provide a concise, one-sentence description for the following cybersecurity resource titled "${resource.title}". Focus on its primary purpose or content.`;
-      
+      const prompt = `Analyze the cybersecurity resource titled "${resource.title}" and provide a concise, one-sentence description and 3-5 relevant keyword tags.`;
       const response = await ai.models.generateContent({
         model: 'gemini-2.5-flash',
         contents: prompt,
+        config: {
+          responseMimeType: "application/json",
+          responseSchema: {
+            type: Type.OBJECT,
+            properties: {
+              description: { type: Type.STRING },
+              tags: {
+                type: Type.ARRAY,
+                items: { type: Type.STRING }
+              }
+            }
+          }
+        }
       });
 
-      const descriptionText = response.text.trim();
-      
-      if (descriptionText) {
-        setDescriptions(prev => ({ ...prev, [resource.id]: descriptionText }));
-      }
+      const result = JSON.parse(response.text);
+      if (result.description) setDescriptions(prev => ({ ...prev, [resource.id]: result.description }));
+      if (result.tags) setTags(prev => ({ ...prev, [resource.id]: result.tags }));
+
     } catch (error) {
-      console.error(`Failed to generate description for "${resource.title}":`, error);
-      setDescriptions(prev => ({ ...prev, [resource.id]: 'Could not generate a description for this resource.' }));
+      console.error(`Failed to generate details for "${resource.title}":`, error);
+      setDescriptions(prev => ({ ...prev, [resource.id]: 'Could not generate details for this resource.' }));
     } finally {
-      setLoadingDescriptions(prev => ({ ...prev, [resource.id]: false }));
+      setLoadingDetails(prev => ({ ...prev, [resource.id]: false }));
     }
-  }, [descriptions, loadingDescriptions]);
+  }, [descriptions, loadingDetails]);
 
   useEffect(() => {
-    for (const resource of paginatedResources) {
-      generateDescription(resource);
-    }
-  }, [paginatedResources, generateDescription]);
+    paginatedResources.forEach(generateDetails);
+  }, [paginatedResources, generateDetails]);
 
+  // Feature Handlers
   const handleDiscover = () => {
     if (filteredResources.length > 0) {
-      const randomIndex = Math.floor(Math.random() * filteredResources.length);
-      const resource = filteredResources[randomIndex];
+      const resource = filteredResources[Math.floor(Math.random() * filteredResources.length)];
       setRandomResource(resource);
-      generateDescription(resource); // Pre-fetch description if not available
-      setIsModalOpen(true);
+      generateDetails(resource);
+      setIsDiscoverModalOpen(true);
+    }
+  };
+
+  const handleSendMessage = async (message: string): Promise<string> => {
+    try {
+      const response = await aiChatModel.sendMessage({ message });
+      return response.text;
+    } catch (error) {
+      console.error("Chat error:", error);
+      return "Sorry, I encountered an error. Please try again.";
     }
   };
 
   return (
-    <div className="bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 min-h-screen font-sans transition-colors duration-300">
+    <div className="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 min-h-screen font-sans transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Header theme={theme} toggleTheme={toggleTheme} />
-        <Sidebar
-          selectedCategory={selectedCategory}
-          onSelectCategory={setSelectedCategory}
-          searchQuery={searchQuery}
-          onSearchChange={setSearchQuery}
-          onDiscover={handleDiscover}
-          totalCount={allResources.length}
-          filteredCount={filteredResources.length}
-        />
-        <main className="py-8">
-          {paginatedResources.length > 0 ? (
-            <>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {paginatedResources.map((resource) => (
-                  <LinkCard 
-                    key={resource.id} 
-                    resource={resource} 
-                    description={descriptions[resource.id]}
-                    isLoadingDescription={loadingDescriptions[resource.id]}
-                    isSaved={savedItems.has(resource.id)}
-                    onToggleSave={toggleSaveItem}
+        <Header theme={theme} toggleTheme={toggleTheme} view={view} setView={setView} />
+        
+        {view === 'Dashboard' && <Dashboard resources={allResources} />}
+        
+        {view === 'Hub' && (
+          <>
+            <Sidebar
+              selectedCategory={selectedCategory}
+              onSelectCategory={setSelectedCategory}
+              searchQuery={searchQuery}
+              onSearchChange={setSearchQuery}
+              onDiscover={handleDiscover}
+              onSubmit={() => setIsSubmitOpen(true)}
+              totalCount={allResources.length}
+              filteredCount={filteredResources.length}
+            />
+            <main className="py-8">
+              {paginatedResources.length > 0 ? (
+                <>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {paginatedResources.map((resource) => (
+                      <LinkCard 
+                        key={resource.id} 
+                        resource={resource} 
+                        description={descriptions[resource.id]}
+                        tags={tags[resource.id]}
+                        isLoadingDetails={loadingDetails[resource.id]}
+                        isSaved={savedItems.has(resource.id)}
+                        onToggleSave={toggleSaveItem}
+                      />
+                    ))}
+                  </div>
+                  <Pagination
+                    currentPage={currentPage}
+                    totalPages={totalPages}
+                    onPageChange={setCurrentPage}
                   />
-                ))}
-              </div>
-              <Pagination
-                currentPage={currentPage}
-                totalPages={totalPages}
-                onPageChange={setCurrentPage}
-              />
-            </>
-          ) : (
-            <div className="flex flex-col items-center justify-center h-full text-center text-slate-500 dark:text-slate-400 mt-16">
-              <svg className="w-16 h-16 mb-4 text-sky-500/20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <h2 className="text-2xl font-semibold text-slate-700 dark:text-slate-300 font-orbitron">No Results Found</h2>
-              <p className="mt-2 text-slate-500 dark:text-slate-400 font-roboto-mono">Try adjusting your search or category filter.</p>
-            </div>
-          )}
-        </main>
+                </>
+              ) : (
+                <div className="text-center text-slate-500 dark:text-slate-400 mt-16">
+                  <h2 className="text-2xl font-semibold text-slate-700 dark:text-slate-300">No Results Found</h2>
+                  <p className="mt-2 font-mono">Try adjusting your search or category filter.</p>
+                </div>
+              )}
+            </main>
+          </>
+        )}
       </div>
-      <ScrollToTop />
+
+      <button
+        onClick={() => setIsChatOpen(true)}
+        className="fixed bottom-5 right-5 z-20 p-4 bg-cyan-500 text-white rounded-full shadow-lg hover:bg-cyan-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 dark:focus:ring-offset-slate-950 transition-all duration-300"
+        aria-label="Open AI Chat Assistant"
+      >
+        <ChatIcon className="w-6 h-6" />
+      </button>
+
       {randomResource && (
         <Modal 
-          isOpen={isModalOpen} 
-          onClose={() => setIsModalOpen(false)} 
+          isOpen={isDiscoverModalOpen} 
+          onClose={() => setIsDiscoverModalOpen(false)} 
           resource={randomResource}
           description={descriptions[randomResource.id]}
-          isLoadingDescription={loadingDescriptions[randomResource.id]}
+          isLoadingDescription={loadingDetails[randomResource.id]}
         />
       )}
+
+      <ChatAssistant 
+        isOpen={isChatOpen}
+        onClose={() => setIsChatOpen(false)}
+        onSendMessage={handleSendMessage}
+      />
+
+      <SubmissionForm
+        isOpen={isSubmitOpen}
+        onClose={() => setIsSubmitOpen(false)}
+        ai={ai}
+        categories={CATEGORIES.filter(c => c !== 'All' && c !== 'Saved')}
+      />
+
     </div>
   );
 };
