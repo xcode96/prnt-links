@@ -1,22 +1,48 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import LinkCard from './components/LinkCard';
 import ScrollToTop from './components/ScrollToTop';
+import Pagination from './components/Pagination';
 import allResources from './data/resources';
 import { Resource } from './types';
+
+const ITEMS_PER_PAGE = 24;
 
 const App: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
 
   const filteredResources = useMemo(() => {
+    // Normalize search query for case-insensitive and whitespace-agnostic matching.
+    const normalizedSearchQuery = searchQuery.trim().toLowerCase();
+
     return allResources.filter((resource: Resource) => {
+      // A resource must match the selected category.
+      // 'All' is a special case that matches every category.
       const categoryMatch = selectedCategory === 'All' || resource.category === selectedCategory;
-      const searchMatch = resource.title.toLowerCase().includes(searchQuery.toLowerCase()) || resource.domain.toLowerCase().includes(searchQuery.toLowerCase());
+
+      // A resource must also match the search query.
+      // An empty search query is considered a match for all resources because `String.prototype.includes('')` returns true.
+      const searchMatch = resource.title.toLowerCase().includes(normalizedSearchQuery) || 
+                          resource.domain.toLowerCase().includes(normalizedSearchQuery);
+
       return categoryMatch && searchMatch;
     });
   }, [selectedCategory, searchQuery]);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedCategory, searchQuery]);
+
+  const totalPages = Math.ceil(filteredResources.length / ITEMS_PER_PAGE);
+
+  const paginatedResources = useMemo(() => {
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    return filteredResources.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  }, [currentPage, filteredResources]);
+
 
   return (
     <div className="bg-gradient-to-br from-[#0a0e1c] via-[#10142c] to-[#2c1a3b] text-gray-100 min-h-screen font-sans">
@@ -31,12 +57,19 @@ const App: React.FC = () => {
           filteredCount={filteredResources.length}
         />
         <main className="flex-1 p-4 md:p-8">
-          {filteredResources.length > 0 ? (
-             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-              {filteredResources.map((resource) => (
-                <LinkCard key={resource.id + resource.title} resource={resource} />
-              ))}
-            </div>
+          {paginatedResources.length > 0 ? (
+            <>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                {paginatedResources.map((resource) => (
+                  <LinkCard key={resource.id + resource.title} resource={resource} />
+                ))}
+              </div>
+              <Pagination
+                currentPage={currentPage}
+                totalPages={totalPages}
+                onPageChange={setCurrentPage}
+              />
+            </>
           ) : (
             <div className="flex flex-col items-center justify-center h-full text-center text-gray-500 mt-16">
               <svg className="w-16 h-16 mb-4 text-cyan-400/30" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">

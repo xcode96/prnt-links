@@ -488,941 +488,118 @@ const rawData = `
 471-Sql Injection Exploitation with Sqlmap and Burp Suite (Burp CO2 Plugin): http://www.hackingarticles.in/sql-injection-exploitation-sqlmap-burp-suite-burp-co2-plugin
 472-SSH Penetration Testing (Port 22): http://www.hackingarticles.in/ssh-penetration-testing-port-22
 473-Manual Post Exploitation on Windows PC (System Command): http://www.hackingarticles.in/manual-post-exploitation-windows-pc-system-command
-474-SSH Pivoting using Meterpreter: http://www.hackingarticles.in/ssh-pivoting-using-meterpreter
-475-Stealing Windows Credentials of Remote PC with MS Office Document: http://www.hackingarticles.in/stealing-windows-credentials-remote-pc-ms-office-document
-476-Telnet Pivoting through Meterpreter: http://www.hackingarticles.in/telnet-pivoting-meterpreter
-477-Hack Password using Rogue Wi-Fi Access Point Attack (WiFi-Pumpkin): http://www.hackingarticles.in/hack-password-using-rogue-wi-fi-access-point-attack-wifi-pumpkin
-478-Hack Remote PC using Fake Updates Scam with Ettercap and Metasploit: http://www.hackingarticles.in/hack-remote-pc-using-fake-updates-scam-with-ettercap-and-metasploit
-479-Hack Remote Windows 10 Password in Plain Text using Wdigest Credential Caching Exploit: http://www.hackingarticles.in/hack-remote-windows-10-password-plain-text-using-wdigest-credential-caching-exploit
-480-Hack Remote Windows 10 PC using TheFatRat: http://www.hackingarticles.in/hack-remote-windows-10-pc-using-thefatrat
-481-2 Ways to Hack Windows 10 Password Easy Way: http://www.hackingarticles.in/hack-windows-10-password-easy-way
-482-How to Change ALL Files Extension in Remote PC (Confuse File Extensions Attack): http://www.hackingarticles.in/how-to-change-all-files-extension-in-remote-pc-confuse-file-extensions-attack
-483-How to Delete ALL Files in Remote Windows PC: http://www.hackingarticles.in/how-to-delete-all-files-in-remote-windows-pc-2
-484-How to Encrypt Drive of Remote Victim PC: http://www.hackingarticles.in/how-to-encrypt-drive-of-remote-victim-pc
-485-Post Exploitation in Linux With Metasploit: https://pentestlab.blog/2013/01/04/post-exploitation-in-linux-with-metasploit
-486-Red Team: https://posts.specterops.io/tagged/red-team?source=post
-487-Code Signing Certi cate Cloning Attacks and Defenses: https://posts.specterops.io/tagged/code-signing?source=post
-488-Phishing: https://posts.specterops.io/tagged/phishing?source=post
-489-PowerPick – A ClickOnce Adjunct: http://www.sixdub.net/?p=555
-490-sql-injection-xss-playground: https://ired.team/offensive-security-experiments/offensive-security-cheetsheets/sql-injection-xss-playground
-491-Privilege Escalation & Post-Exploitation: https://github.com/rmusser01/Infosec_Reference/raw/master/Draft/Privilege%20Escalation%20%26%20Post-Exploitation.md
-492-https-payload-and-c2-redirectors: https://posts.specterops.io/https-payload-and-c2-redirectors-ff8eb6f87742?source=placement_card_footer_grid---------2-41
-493-a-push-toward-transparency: https://posts.specterops.io/a-push-toward-transparency-c385a0dd1e34?source=placement_card_footer_grid---------0-41
-494-bloodhound: https://posts.specterops.io/tagged/bloodhound?source=post
-495-active directory: https://posts.specterops.io/tagged/active-directory?source=post
-496-Load & Execute Bundles with migrationTool: https://posts.specterops.io/load-execute-bundles-with-migrationtool-f952e276e1a6?source=placement_card_footer_grid---------1-41
-497-Outlook Forms and Shells: https://sensepost.com/blog/2017/outlook-forms-and-shells/
-498-Tools: https://sensepost.com/blog/tools/
-499-2018 pentesting resources: https://sensepost.com/blog/2018/
-500-network pentest: https://securityonline.info/category/penetration-testing/network-pentest/
-501-[technical] Pen-testing resources: https://medium.com/p/cd01de9036ad
-502-Stored XSS on Facebook: https://opnsec.com/2018/03/stored-xss-on-facebook/
-503-vulnerabilities: https://www.brokenbrowser.com/category/vulnerabilities/
-504-Extending BloodHound: Track and Visualize Your Compromise: https://porterhau5.com/.../extending-bloodhound-track-and-visualize-your-compromise
-505-so-you-want-to-be-a-web-security-researcher: https://portswigger.net/blog/so-you-want-to-be-a-web-security-researcher
-506-BugBounty — AWS S3 added to my “Bucket” list!: https://medium.com/p/f68dd7d0d1ce
-507-BugBounty — API keys leakage, Source code disclosure in India’s largest e-commerce health care company: https://medium.com/p/c75967392c7e
-508-BugBounty — Exploiting CRLF Injection can lands into a nice bounty: https://medium.com/p/159525a9cb62
-509-BugBounty — How I was able to bypass rewall to get RCE and then went from server shell to get root user account: https://medium.com/p/783f71131b94
-510-BugBounty — “I don’t need your current password to login into youraccount” - How could I completely takeover any user’s account in an online classi ed ads company: https://medium.com/p/e51a945b083d
-511-Ping Power — ICMP Tunnel: https://medium.com/bugbountywriteup/ping-power-icmp-tunnel-31e2abb2aaea?source=placement_card_footer_grid---------1-41
-512-hacking: https://www.nextleveltricks.com/hacking/
-513-Top 8 Best YouTube Channels To Learn Ethical Hacking Online !: https://www.nextleveltricks.com/youtube-channels-to-learn-hacking/
-514-Google Dorks List 2018 | Fresh Google Dorks 2018 for SQLi: https://www.nextleveltricks.com/latest-google-dorks-list/
-515-Art of Shellcoding: Basic AES Shellcode Crypter: http://www.nipunjaswal.com/2018/02/shellcode-crypter.html
-516-Big List Of Google Dorks Hacking: https://xspiyr.wordpress.com/2012/09/05/big-list-of-google-dorks-hacking/
-517-nmap-cheatsheet: https://bitrot.sh/cheatsheet/09-12-2017-nmap-cheatsheet/
-518-Aws Recon: https://enciphers.com/tag/aws-recon/
-519-Recon: https://enciphers.com/tag/recon/
-520-Subdomain Enumeration: https://enciphers.com/tag/subdomain-enumeration/
-521-Shodan: https://enciphers.com/tag/shodan/
-522-Dump LAPS passwords with ldapsearch: https://malicious.link/post/2017/dump-laps-passwords-with-ldapsearch/
-523-peepdf - PDF Analysis Tool: http://eternal-todo.com/tools/peepdf-pdf-analysis-tool
-524-Evilginx 2 - Next Generation of Phishing 2FA Tokens: breakdev.org/evilginx-2-next-generation-of-phishing-2fa-tokens/
-526-Evil XML with two encodings: https://mohemiv.com/all/evil-xml/
-527-create-word-macros-with-powershell: https://4sysops.com/archives/create-word-macros-with-powershell/
-528-Excess XSS A comprehensive tutorial on cross-site scripting: https://excess-xss.com/
-529-Executing Commands and Bypassing AppLocker with PowerShell Diagnostic Scripts: https://bohops.com/2018/01/07/executing-commands-and-bypassing-applocker-with-powershell-diagnostic-scripts/
-530-Abusing DCOM For Yet Another Lateral Movement Technique: https://bohops.com/2018/04/28/abusing-dcom-for-yet-another-lateral-movement-technique/
-531-Trust Direction: An Enabler for Active Directory Enumeration and Trust Exploitation: https://bohops.com/2017/12/02/trust-direction-an-enabler-for-active-directory-enumeration-and-trust-exploitation/
-532-Abusing DCOM For Yet Another Lateral Movement Technique: https://bohops.com/2018/04/28/abusing-dcom-for-yet-another-lateral-movement-technique/
-533-“Practical recon techniques for bug hunters & pen testers”: https://blog.appsecco.com/practical-recon-techniques-for-bug-hunters-pen-testers-at-levelup-0x02-b72c15641972?source=placement_card_footer_grid---------2-41
-534-Exploiting Node.js deserialization bug for Remote Code Execution: https://opsecx.com/index.php/2017/02/08/exploiting-node-js-deserialization-bug-for-remote-code-execution/
-535-Exploiting System Shield AntiVirus Arbitrary Write Vulnerability using SeTakeOwnershipPrivilege: http://www.greyhathacker.net/?p=1006
-536-Running Macros via ActiveX Controls: http://www.greyhathacker.net/?p=948
-537-all=BUG+MALWARE+EXPLOITS: http://www.greyhathacker.net/?cat=18
-538-“FILELESS” UAC BYPASS USING EVENTVWR.EXE AND: https://enigma0x3.net/2016/08/15/fileless-uac-bypass-using-eventvwr-exe-and-registry-hijacking
-539-BYPASSING UAC ON WINDOWS 10 USING DISK CLEANUP: https://enigma0x3.net/2016/07/22/bypassing-uac-on-windows-10-using-disk-cleanup/
-540-A Look at CVE-2017-8715: Bypassing CVE-2017-0218 using PowerShell Module Manifests: https://enigma0x3.net/2017/11/06/a-look-at-cve-2017-8715-bypassing-cve-2017-0218-using-powershell-module-manifests/
-541-“FILELESS” UAC BYPASS USING SDCLT.EXE: https://enigma0x3.net/2017/03/17/fileless-uac-bypass-using-sdclt-exe
-542-File Upload XSS: https://medium.com/p/83ea55bb9a55
-543-Firebase Databases: https://medium.com/p/f651a7d49045
-544-Safe Red Team Infrastructure: https://medium.com/@malcomvetter/safe-red-team-infrastructure-c5d6a0f13fac
-545-RED-TEAM: https://cybersyndicates.com/tags/red-team/
-546-Egressing Bluecoat with Cobaltstike & Let's Encrypt: https://www.youtube.com/watch?v=cgwfjCmKQwM
-547-Veil-Evasion: https://cybersyndicates.com/tags/veil-evasion/
-548-Dangerous Virus For Windows Crashes Everything Hack window Using Virus: http://thelearninghacking.com/create-virus-hack-windows/
-549-Download Google Dorks List 2019: https://medium.com/p/323c8067502c
-550-Don’t leak sensitive data via security scanning tools: https://medium.com/p/7d1f715f0486
-551-CRLF Injection Into PHP’s cURL Options: https://medium.com/@tomnomnom/crlf-injection-into-phps-curl-options-e2e0d7cfe545?source=placement_card_footer_grid---------0-60
-552-Open Redirects & Security Done Right!: https://medium.com/@AkshaySharmaUS/open-redirects-security-done-right-e524a3185496?source=placement_card_footer_grid---------2-60
-553-DOM XSS – auth.uber.com: https://stamone-bug-bounty.blogspot.com/2017/10/dom-xss-auth_14.html
-554-PowerPoint and Custom Actions: https://cofense.com/powerpoint-and-custom-actions/
-555-exploiting-adobe-coldfusion: https://codewhitesec.blogspot.com/2018/03/exploiting-adobe-coldfusion.html
-556-Command and Control – HTTPS: https://pentestlab.blog/2017/10/04/command-and-control-https
-557-Command and Control – Images: https://pentestlab.blog/2018/01/02/command-and-control-images
-558-Command and Control – JavaScript: https://pentestlab.blog/2018/01/08/command-and-control-javascript
-559-XSS-Payloads: https://github.com/Pgaijin66/XSS-Payloads
-560-Command and Control – Web Interface: https://pentestlab.blog/2018/01/03/command-and-control-web-interface
-561-Command and Control – Website: https://pentestlab.blog/2017/11/14/command-and-control-website
-562-Command and Control – WebSocket: https://pentestlab.blog/2017/12/06/command-and-control-websocket
-563-atomic-red-team: https://github.com/redcanaryco/atomic-red-team
-564-PowerView-3.0-tricks.ps1: https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993
-565-awesome-sec-talks: https://github.com/PaulSec/awesome-sec-talks
-566-Awesome-Red-Teaming: https://github.com/yeyintminthuhtut/Awesome-Red-Teaming
-567-awesome-php: https://github.com/ziadoz/awesome-php
-568-latest-hacks: https://hackercool.com/latest-hacks/
-569-GraphQL NoSQL Injection Through JSON Types: http://www.east5th.co/blog/2017/06/12/graphql-nosql-injection-through-json-types/
-570-Writing .NET Executables for Pentesters: https://www.peew.pw/blog/2017/12/4/writing-net-executables-for-penteters-part-2
-571-A curated list of fuzzing resources ( Books, courses - free and paid, videos, tools, tutorials and vulnerable applications to practice on ) for learning Fuzzing and initial phases of Exploit Development like root cause analysis.: https://github.com/secfigo/Awesome-Fuzzing
-572-How to Shutdown, Restart, Logoff, and Hibernate Remote Windows PC: http://www.hackingarticles.in/how-to-shutdown-restart-logoff-and-hibernate-remote-windows-pc
-572-Injecting Metasploit Payloads into Android Applications – Manually: https://pentestlab.blog/2017/06/26/injecting-metasploit-payloads-into-android-applications-manually
-573-Google Dorks For Carding [Huge List] - Part 1: https://hacker-arena.blogspot.com/2014/03/google-dorks-for-carding-huge-list-part.html
-574-Google dorks for growth hackers: https://medium.com/p/7f83c8107057
-575-Google Dorks For Carding (HUGE LIST): https://leetpedia.blogspot.com/2013/01/google-dorks-for-carding-huge-list.html
-576-BIGGEST SQL Injection Dorks List ~ 20K+ Dorks: https://leetpedia.blogspot.com/2013/05/biggest-sql-injection-dorks-list-20k.html
-577-Pastebin Accounts Hacking (Facebook/Paypal/LR/Gmail/Yahoo, etc): https://leetpedia.blogspot.com/2013/01/pastebin-accounts-hacking.html
-578-How I Chained 4 vulnerabilities on GitHub Enterprise, From SSRF Execution Chain to RCE!: http://blog.orange.tw/2017/07/how-i-chained-4-vulnerabilities-on.html
-579-Hijacking VNC (Enum, Brute, Access and Crack): https://medium.com/p/d3d18a4601cc
-580-Linux Post Exploitation Command List: https://github.com/mubix/post-exploitation/wiki
-581-List of google dorks for sql injection: https://deadlyhacker.wordpress.com/2013/05/09/list-of-google-dorks-for-sql-injection/
-582-Microsoft Office – NTLM Hashes via Frameset: https://pentestlab.blog/2017/12/18/microsoft-office-ntlm-hashes-via-frameset
-583-Microsoft Windows 10 - Child Process Restriction Mitigation Bypass: https://www.exploit-db.com/download/44888.txt
-584-Microsoft Windows CVE-2018-8210 Remote Code Execution Vulnerability: https://www.securityfocus.com/bid/104407
-585-Microsoft Windows Kernel CVE-2018-0982 Local Privilege Escalation Vulnerability: https://www.securityfocus.com/bid/104382
-586-miSafes Mi-Cam Device Hijacking: https://packetstormsecurity.com/files/146504/SA-20180221-0.txt
-587-Low-Level Windows API Access From PowerShell: https://www.fuzzysecurity.com/tutorials/24.html
-588-Linux Kernel 'mm/hugetlb.c' Local Denial of Service Vulnerability: https://www.securityfocus.com/bid/103316
-589-Lateral Movement – RDP: https://pentestlab.blog/2018/04/24/lateral-movement-rdp/
-590-Snagging creds from locked machines: https://malicious.link/post/2016/snagging-creds-from-locked-machines/
-591-Making a Blind SQL Injection a Little Less Blind: https://medium.com/p/428dcb614ba8
-592-VulnHub — Kioptrix: Level 5: https://medium.com/@bondo.mike/vulnhub-kioptrix-level-5-88ab65146d48?source=placement_card_footer_grid---------1-60
-593-Unauthenticated Account Takeover Through HTTP Leak: https://medium.com/p/33386bb0ba0b
-594-Hakluke’s Ultimate OSCP Guide: Part 1 — Is OSCP for you?: https://medium.com/@hakluke/haklukes-ultimate-oscp-guide-part-1-is-oscp-for-you-b57cbcce7440?source=placement_card_footer_grid---------2-43
-595-Finding Target-relevant Domain Fronts: https://medium.com/@vysec.private/finding-target-relevant-domain-fronts-7f4ad216c223?source=placement_card_footer_grid---------0-44
-596-Safe Red Team Infrastructure: https://medium.com/@malcomvetter/safe-red-team-infrastructure-c5d6a0f13fac?source=placement_card_footer_grid---------1-60
-597-Cobalt Strike Visualizations: https://medium.com/@001SPARTaN/cobalt-strike-visualizations-e6a6e841e16b?source=placement_card_footer_grid---------2-60
-598-OWASP Top 10 2017 — Web Application Security Risks: https://medium.com/p/31f356491712
-599-XSS-Auditor — the protector of unprotected: https://medium.com/bugbountywriteup/xss-auditor-the-protector-of-unprotected-f900a5e15b7b?source=placement_card_footer_grid---------0-60
-600-Netcat vs Cryptcat – Remote Shell to Control Kali Linux from Windows machine: https://gbhackers.com/netcat-vs-cryptcat
-601-Jenkins Servers Infected With Miner.: https://medium.com/p/e370a900ab2e
-602-cheat-sheet: http://pentestmonkey.net/category/cheat-sheet
-603-Command and Control – Website Keyword: https://pentestlab.blog/2017/09/14/command-and-control-website-keyword/
-604-Command and Control – Twitter: https://pentestlab.blog/2017/09/26/command-and-control-twitter/
-605-Command and Control – Windows COM: https://pentestlab.blog/2017/09/01/command-and-control-windows-com/
-606-Microsoft Office – NTLM Hashes via Frameset: https://pentestlab.blog/2017/12/18/microsoft-office-ntlm-hashes-via-frameset/
-607-PHISHING AGAINST PROTECTED VIEW: https://enigma0x3.net/2017/07/13/phishing-against-protected-view/
-608-PHISHING WITH EMPIRE: https://enigma0x3.net/2016/03/15/phishing-with-empire/
-609-Reverse Engineering Android Applications: https://pentestlab.blog/2017/02/06/reverse-engineering-android-applications/
-610-HTML Injection: https://pentestlab.blog/2013/06/26/html-injection/
-611-Meterpreter stage AV/IDS evasion with powershell: https://arno0x0x.wordpress.com/2016/04/13/meterpreter-av-ids-evasion-powershell/
-612-Windows Atomic Tests by ATT&CK Tactic & Technique: https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/windows-index.md
-613-Windows Active Directory Post Exploitation Cheatsheet: https://medium.com/p/48c2bd70388
-614-Windows 10 UAC Loophole Can Be Used to Infect Systems with Malware: http://news.softpedia.com/news/windows-10-uac-loophole-can-be-used-to-infect-systems-with-malware-513996.shtml
-615-How to Bypass Anti-Virus to Run Mimikatz: https://www.blackhillsinfosec.com/bypass-anti-virus-run-mimikatz/
-616-Userland API Monitoring and Code Injection Detection: https://0x00sec.org/t/userland-api-monitoring-and-code-injection-detection/5565
-617-USE TOR. USE EMPIRE.: http://secureallthethings.blogspot.com/2016/11/use-tor-use-empire.html
-617-ADVANCED CROSS SITE SCRIPTING (XSS) CHEAT SHEET: https://www.muhaddis.info/advanced-cross-site-scripting-xss-cheat-sheet/
-618-Empire without PowerShell.exe: https://bneg.io/2017/07/26/empire-without-powershell-exe/
-619-RED TEAM: https://bneg.io/category/red-team/
-620-PDF Tools: https://blog.didierstevens.com/programs/pdf-tools/
-621-DNS Data ex ltration — What is this and How to use? https://blog.fosec.vn/dns-data-exfiltration-what-is-this-and-how-to-use-2f6c69998822
-621-Google Dorks: https://medium.com/p/7cfd432e0cf3
-622-Hacking with JSP Shells: https://blog.netspi.com/hacking-with-jsp-shells/
-623-Malware Analysis: https://github.com/RPISEC/Malware/raw/master/README.md
-624-A curated list of Capture The Flag (CTF) frameworks, libraries, resources and softwares.: https://github.com/SandySekharan/CTF-tool
-625-Group Policy Preferences: https://pentestlab.blog/2017/03/20/group-policy-preferences
-627-CHECKING FOR MALICIOUSNESS IN AC OFORM OBJECTS ON PDF FILES: https://furoner.wordpress.com/2017/11/15/checking-for-maliciousness-in-acroform-objects-on-pdf-files
-628-deobfuscation: https://furoner.wordpress.com/tag/deobfuscation/
-629-POWERSHELL EMPIRE STAGERS 1: PHISHING WITH AN OFFICE MACRO AND EVADING AVS: https://fzuckerman.wordpress.com/2016/10/06/powershell-empire-stagers-1-phishing-with-an-office-macro-and-evading-avs/
-630-A COMPREHENSIVE TUTORIAL ON CROSS-SITE SCRIPTING: https://fzuckerman.wordpress.com/2016/10/06/a-comprehensive-tutorial-on-cross-site-scripting/
-631-GCAT – BACKDOOR EM PYTHON: https://fzuckerman.wordpress.com/2016/10/06/gcat-backdoor-em-python/
-632-Latest Carding Dorks List for Sql njection 2019: https://latestechnews.com/carding-dorks/
-633-google docs for credit card: https://latestechnews.com/tag/google-docs-for-credit-card/
-634-How To Scan Multiple Organizations With Shodan and Golang (OSINT): https://medium.com/p/d994ba6a9587
-635-How to Evade Application Whitelisting Using REGSVR32: https://www.blackhillsinfosec.com/evade-application-whitelisting-using-regsvr32/
-636-phishing: https://www.blackhillsinfosec.com/tag/phishing/
-637-Merlin in action: Intro to Merlin: https://asciinema.org/a/ryljo8qNjHz1JFcFDK7wP6e9I
-638-IP Cams from around the world: https://medium.com/p/a6f269f56805
-639-Advanced Cross Site Scripting(XSS) Cheat Sheet by Jaydeep Dabhi: https://jaydeepdabhi.wordpress.com/2016/01/12/advanced-cross-site-scriptingxss-cheat-sheet-by-jaydeep-dabhi/
-640-Just how easy it is to do a domain or subdomain take over!?: https://medium.com/p/265d635b43d8
-641-How to Create hidden user in Remote PC: http://www.hackingarticles.in/create-hidden-remote-metaspolit
-642-Process Doppelgänging – a new way to impersonate a process: https://hshrzd.wordpress.com/2017/12/18/process-doppelganging-a-new-way-to-impersonate-a-process/
-643-How to turn a DLL into astandalone EXE: https://hshrzd.wordpress.com/2016/07/21/how-to-turn-a-dll-into-a-standalone-exe/
-644-Hijacking extensions handlers as a malware persistence method: https://hshrzd.wordpress.com/2017/05/25/hijacking-extensions-handlers-as-a-malware-persistence-method/
-645-I'll Get Your Credentials ... Later!: https://www.fuzzysecurity.com/tutorials/18.html
-646-Game Over: CanYouPwnMe > Kevgir-1: https://www.fuzzysecurity.com/tutorials/26.html
-647-IKARUS anti.virus and its 9 exploitable kernel vulnerabilities: http://www.greyhathacker.net/?p=995
-648-Getting started in Bug Bounty: https://medium.com/p/7052da28445a
-649-Union SQLi Challenges (Zixem Write-up): https://medium.com/ctf-writeups/union-sqli-challenges-zixem-write-up-4e74ad4e88b4?source=placement_card_footer_grid---------2-60
-650-scanless – A Tool for Perform Anonymous Port Scan on Target Websites: https://gbhackers.com/scanless-port-scans-websites-behalf
-651-WEBAPP PENTEST: https://securityonline.info/category/penetration-testing/webapp-pentest/
-652-Cross-Site Scripting (XSS) Payloads: https://securityonline.info/tag/cross-site-scripting-xss-payloads/
-653-sg1: swiss army knife for data encryption, exfiltration & covert communication: https://securityonline.info/tag/sg1/
-654-NETWORK PENTEST: https://securityonline.info/category/penetration-testing/network-pentest/
-655-SQL injection in an UPDATE query - a bug bounty story!: https://zombiehelp54.blogspot.com/2017/02/sql-injection-in-update-query-bug.html
-656-Cross-site Scripting: https://www.netsparker.com/blog/web-security/cross-site-scripting-xss/
-657-Local File Inclusion: https://www.netsparker.com/blog/web-security/local-file-inclusion-vulnerability/
-658-Command Injection: https://www.netsparker.com/blog/web-security/command-injection-vulnerability/
-659-a categorized list of Windows CMD commands: https://ss64.com/nt/commands.html
-660-Understanding Guide for Nmap Timing Scan (Firewall Bypass): http://www.hackingarticles.in/understanding-guide-nmap-timing-scan-firewall-bypass
-661-RFID Hacking with The Proxmark 3: https://blog.kchung.co/tag/rfid/
-662-A practical guide to RFID badge copying: https://blog.nviso.be/2017/01/11/a-practical-guide-to-rfid-badge-copying
-663-Denial of Service using Cookie Bombing: https://medium.com/p/55c2d0ef808c
-664-Vultr Domain Hijacking: https://vincentyiu.co.uk/red-team/cloud-security/vultr-domain-hijacking
-665-Command and Control: https://vincentyiu.co.uk/red-team/domain-fronting
-666-Cisco Auditing Tool & Cisco Global Exploiter to Exploit 14 Vulnerabilities in Cisco Switches and Routers: https://gbhackers.com/cisco-global-exploiter-cge
-667-CHECKING FOR MALICIOUSNESS IN ACROFORM OBJECTS ON PDF FILES: https://furoner.wordpress.com/2017/11/15/checking-for-maliciousness-in-acroform-objects-on-pdf-files
-668-Situational Awareness: https://pentestlab.blog/2018/05/28/situational-awareness/
-669-Unquoted Service Path: https://pentestlab.blog/2017/03/09/unquoted-service-path
-670-NFS: https://pentestacademy.wordpress.com/2017/09/20/nfs/
-671-List of Tools for Pentest Rookies: https://pentestacademy.wordpress.com/2016/09/20/list-of-tools-for-pentest-rookies/
-672-Common Windows Commands for Pentesters: https://pentestacademy.wordpress.com/2016/06/21/common-windows-commands-for-pentesters/
-673-Open-Source Intelligence (OSINT) Reconnaissance: https://medium.com/p/75edd7f7dada
-674-OSINT x UCCU Workshop on Open Source Intelligence: https://www.slideshare.net/miaoski/osint-x-uccu-workshop-on-open-source-intelligence
-675-Advanced Attack Techniques: https://www.cyberark.com/threat-research-category/advanced-attack-techniques/
-676-Credential Theft: https://www.cyberark.com/threat-research-category/credential-theft/
-678-The Cloud Shadow Admin Threat: 10 Permissions to Protect: https://www.cyberark.com/threat-research-blog/cloud-shadow-admin-threat-10-permissions-protect/
-679-Online Credit Card Theft: Today’s Browsers Store Sensitive Information Deficiently, Putting User Data at Risk: https://www.cyberark.com/threat-research-blog/online-credit-card-theft-todays-browsers-store-sensitive-information-deficiently-putting-user-data-risk/
-680-Weakness Within: Kerberos Delegation: https://www.cyberark.com/threat-research-blog/weakness-within-kerberos-delegation/
-681-Simple Domain Fronting PoC with GAE C2 server: https://www.securityartwork.es/2017/01/31/simple-domain-fronting-poc-with-gae-c2-server/
-682-Find Critical Information about a Host using DMitry: https://www.thehackr.com/find-critical-information-host-using-dmitry/
-683-How To Do OS Fingerprinting In Kali Using Xprobe2: http://disq.us/?url=http%3A%2F%2Fwww.thehackr.com%2Fos-fingerprinting-kali%2F&key=scqgRVMQacpzzrnGSOPySA
-684-Crack SSH, FTP, Telnet Logins Using Hydra: https://www.thehackr.com/crack-ssh-ftp-telnet-logins-using-hydra/
-685-Reveal Saved Passwords in Browser using JavaScript Injection: https://www.thehackr.com/reveal-saved-passwords-browser-using-javascript-injection/
-686-Nmap Cheat Sheet: https://s3-us-west-2.amazonaws.com/stationx-public-download/nmap_cheet_sheet_0.6.pdf
-687-Manual Post Exploitation on Windows PC (Network Command): http://www.hackingarticles.in/manual-post-exploitation-windows-pc-network-command
-688-Hack Gmail or Facebook Password of Remote PC using NetRipper Exploitation Tool: http://www.hackingarticles.in/hack-gmail-or-facebook-password-of-remote-pc-using-netripper-exploitation-tool
-689-Hack Locked Workstation Password in Clear Text: http://www.hackingarticles.in/hack-locked-workstation-password-clear-text
-690-How to Find ALL Excel, Office, PDF, and Images in Remote PC: http://www.hackingarticles.in/how-to-find-all-excel-office-pdf-images-files-in-remote-pc
-691-red-teaming: https://www.redteamsecure.com/category/red-teaming/
-692-Create a Fake AP and Sniff Data mitmAP: http://www.uaeinfosec.com/create-fake-ap-sniff-data-mitmap/
-693-Bruteforcing From Nmap Output BruteSpray: http://www.uaeinfosec.com/bruteforcing-nmap-output-brutespray/
-694-Reverse Engineering Framework radare2: http://www.uaeinfosec.com/reverse-engineering-framework-radare2/
-695-Automated ettercap TCP/IP Hijacking Tool Morpheus: http://www.uaeinfosec.com/automated-ettercap-tcpip-hijacking-tool-morpheus/
-696-List Of Vulnerable SQL Injection Sites: https://www.blogger.com/share-post.g?blogID=1175829128367570667&postID=4652029420701251199
-697-Command and Control – Gmail: https://pentestlab.blog/2017/08/03/command-and-control-gmail/
-698-Command and Control – DropBox: https://pentestlab.blog/2017/08/29/command-and-control-dropbox/
-699-Skeleton Key: https://pentestlab.blog/2018/04/10/skeleton-key/
-700-Secondary Logon Handle: https://pentestlab.blog/2017/04/07/secondary-logon-handle
-701-Hot Potato: https://pentestlab.blog/2017/04/13/hot-potato
-702-Leveraging INF-SCT Fetch & Execute Techniques For Bypass, Evasion, & Persistence (Part 2): https://bohops.com/2018/03/10/leveraging-inf-sct-fetch-execute-techniques-for-bypass-evasion-persistence-part-2/
-703-Linux-Kernel-exploits: http://tacxingxing.com/category/exploit/kernel-exploit/
-704-Linux-Kernel-Exploit Stack Smashing: http://tacxingxing.com/2018/02/26/linuxkernelexploit-stack-smashing/
-705-Linux Kernel Exploit Environment: http://tacxingxing.com/2018/02/15/linuxkernelexploit-huan-jing-da-jian/
-706-Linux-Kernel-Exploit NULL dereference: http://tacxingxing.com/2018/02/22/linuxkernelexploit-null-dereference/
-707-Apache mod_python for red teams: https://labs.nettitude.com/blog/apache-mod_python-for-red-teams/
-708-Bounty Write-up (HTB): https://medium.com/p/9b01c934dfd2/
-709-CTF Writeups: https://medium.com/ctf-writeups
-710-Detecting Malicious Microsoft Office Macro Documents: http://www.greyhathacker.net/?p=872
-711-SQL injection in Drupal: https://hackerone.com/reports/31756
-712-XSS and open redirect on Twitter: https://hackerone.com/reports/260744
-713-Shopify login open redirect: https://hackerone.com/reports/55546
-714-HackerOne interstitial redirect: https://hackerone.com/reports/111968
-715-Ubiquiti sub-domain takeovers: https://hackerone.com/reports/181665
-716-Scan.me pointing to Zendesk: https://hackerone.com/reports/114134
-717-Starbucks' sub-domain takeover: https://hackerone.com/reports/325336
-718-Vine's sub-domain takeover: https://hackerone.com/reports/32825
-719-Uber's sub-domain takeover: https://hackerone.com/reports/175070
-720-Read access to Google: https://blog.detectify.com/2014/04/11/how-we-got-read-access-on-googles-production-servers/
-721-A Facebook XXE with Word: https://www.bram.us/2014/12/29/how-i-hacked-facebook-with-a-word-document/
-722-The Wikiloc XXE: https://www.davidsopas.com/wikiloc-xxe-vulnerability/
-723-Uber Jinja2 TTSI: https://hackerone.com/reports/125980
-724-Uber Angular template injection: https://hackerone.com/reports/125027
-725-Yahoo Mail stored XSS: https://klikki.fi/adv/yahoo2.html
-726-Google image search XSS: https://mahmoudsec.blogspot.com/2015/09/how-i-found-xss-vulnerability-in-google.html
-727-Shopify Giftcard Cart XSS : https://hackerone.com/reports/95089
-728-Shopify wholesale XSS : https://hackerone.com/reports/106293
-729-Bypassing the Shopify admin authentication: https://hackerone.com/reports/270981
-730-Starbucks race conditions: https://sakurity.com/blog/2015/05/21/starbucks.html
-731-Binary.com vulnerability – stealing a user's money: https://hackerone.com/reports/98247
-732-HackerOne signal manipulation: https://hackerone.com/reports/106305
-733-Shopify S buckets open: https://hackerone.com/reports/98819
-734-HackerOne S buckets open: https://hackerone.com/reports/209223
-735-Bypassing the GitLab 2F authentication: https://gitlab.com/gitlab-org/gitlab-ce/issues/14900
-736-Yahoo PHP info disclosure: https://blog.it-securityguard.com/bugbounty-yahoo-phpinfo-php-disclosure-2/
-737-Shopify for exporting installed users: https://hackerone.com/reports/96470
-738-Shopify Twitter disconnect: https://hackerone.com/reports/111216
-739-Badoo full account takeover: https://hackerone.com/reports/127703
-740-Disabling PS Logging: https://github.com/leechristensen/Random/blob/master/CSharp/DisablePSLogging.cs
-741-macro-less-code-exec-in-msword: https://sensepost.com/blog/2017/macro-less-code-exec-in-msword/
-742-5 ways to Exploiting PUT Vulnerability: http://www.hackingarticles.in/5-ways-to-exploiting-put-vulnerabilit
-743-5 Ways to Exploit Verb Tempering Vulnerability: http://www.hackingarticles.in/5-ways-to-exploit-verb-tempering-vulnerability
-744-5 Ways to Hack MySQL Login Password: http://www.hackingarticles.in/5-ways-to-hack-mysql-login-password
-745-5 Ways to Hack SMB Login Password: http://www.hackingarticles.in/5-ways-to-hack-smb-login-password
-746-6 Ways to Hack FTP Login Password: http://www.hackingarticles.in/6-ways-to-hack-ftp-login-password
-746-6 Ways to Hack SNMP Password: http://www.hackingarticles.in/6-ways-to-hack-snmp-password
-747-6 Ways to Hack VNC Login Password: http://www.hackingarticles.in/6-ways-to-hack-vnc-login-password
-748-Access Sticky keys Backdoor on Remote PC with Sticky Keys Hunter: http://www.hackingarticles.in/access-sticky-keys-backdoor-remote-pc-sticky-keys-hunter
-749-Beginner Guide to IPtables: http://www.hackingarticles.in/beginner-guide-iptables
-750-Beginner Guide to impacket Tool kit: http://www.hackingarticles.in/beginner-guide-to-impacket-tool-kit
-751-Exploit Remote Windows 10 PC using Discover Tool: http://www.hackingarticles.in/exploit-remote-windows-10-pc-using-discover-tool
-752-Forensics Investigation of Remote PC (Part 2): http://www.hackingarticles.in/forensics-investigation-of-remote-pc-part-2
-753-5 ways to File upload vulnerability Exploitation: http://www.hackingarticles.in/5-ways-file-upload-vulnerability-exploitation
-754-FTP Penetration Testing in Ubuntu (Port 21): http://www.hackingarticles.in/ftp-penetration-testing-in-ubuntu-port-21
-755-FTP Penetration Testing on Windows (Port 21): http://www.hackingarticles.in/ftp-penetration-testing-windows
-756-FTP Pivoting through RDP: http://www.hackingarticles.in/ftp-pivoting-rdp
-757-Fun with Metasploit Payloads: http://www.hackingarticles.in/fun-metasploit-payloads
-758-Gather Cookies and History of Mozilla Firefox in Remote Windows, Linux or MAC PC: http://www.hackingarticles.in/gather-cookies-and-history-of-mozilla-firefox-in-remote-windows-linux-or-mac-pc
-759-Generating Reverse Shell using Msfvenom (One Liner Payload): http://www.hackingarticles.in/generating-reverse-shell-using-msfvenom-one-liner-payload
-760-Generating Scan Reports Using Nmap (Output Scan): http://www.hackingarticles.in/generating-scan-reports-using-nmap-output-scan
-761-Get Meterpreter Session of Locked PC Remotely (Remote Desktop Enabled): http://www.hackingarticles.in/get-meterpreter-session-locked-pc-remotely-remote-desktop-enabled
-762-Hack ALL Security Features in Remote Windows 7 PC: http://www.hackingarticles.in/hack-all-security-features-in-remote-windows-7-pc
-763-5 ways to Exploit LFi Vulnerability: http://www.hackingarticles.in/5-ways-exploit-lfi-vulnerability
-764-5 Ways to Directory Bruteforcing on Web Server: http://www.hackingarticles.in/5-ways-directory-bruteforcing-web-server
-765-Hack Call Logs, SMS, Camera of Remote Android Phone using Metasploit: http://www.hackingarticles.in/hack-call-logs-sms-camera-remote-android-phone-using-metasploit
-766-Hack Gmail and Facebook Password in Network using Bettercap: http://www.hackingarticles.in/hack-gmail-facebook-password-network-using-bettercap
-767-ICMP Penetration Testing: http://www.hackingarticles.in/icmp-penetration-testing
-768-Understanding Guide to Mimikatz: http://www.hackingarticles.in/understanding-guide-mimikatz
-769-5 Ways to Create Dictionary for Bruteforcing: http://www.hackingarticles.in/5-ways-create-dictionary-bruteforcing
-770-Linux Privilege Escalation using LD_Preload: http://www.hackingarticles.in/linux-privilege-escalation-using-ld_preload/
-771-2 Ways to Hack Remote Desktop Password using kali Linux: http://www.hackingarticles.in/2-ways-to-hack-remote-desktop-password-using-kali-linux
-772-2 ways to use Msfvenom Payload with Netcat: http://www.hackingarticles.in/2-ways-use-msfvenom-payload-netcat
-773-4 ways to Connect Remote PC using SMB Port: http://www.hackingarticles.in/4-ways-connect-remote-pc-using-smb-port
-774-4 Ways to DNS Enumeration: http://www.hackingarticles.in/4-ways-dns-enumeration
-775-4 Ways to get Linux Privilege Escalation: http://www.hackingarticles.in/4-ways-get-linux-privilege-escalation
-776-101+ OSINT Resources for Investigators [2019]: https://i-sight.com/resources/101-osint-resources-for-investigators/
-777-Week in OSINT #2019–02: https://medium.com/week-in-osint/week-in-osint-2019-02-d4009c27e85f
-778-OSINT Cheat Sheet: https://hack2interesting.com/osint-cheat-sheet/
-779-OSINT Cheat Sheet: https://infoskirmish.com/osint-cheat-sheet/
-780-OSINT Links for Investigators: https://i-sight.com/resources/osint-links-for-investigators/
-781- Metasploit Cheat Sheet : https://www.kitploit.com/2019/02/metasploit-cheat-sheet.html
-782- Exploit Development Cheat Sheet: https://github.com/coreb1t/awesome-pentest-cheat-sheets/commit/5b83fa9cfb05f4774eb5e1be2cde8dbb04d011f4
-783-Building Profiles for a Social Engineering Attack: https://pentestlab.blog/2012/04/19/building-profiles-for-a-social-engineering-attack/
-784-Practical guide to NTLM Relaying in 2017 (A.K.A getting a foothold in under 5 minutes): https://byt3bl33d3r.github.io/practical-guide-to-ntlm-relaying-in-2017-aka-getting-a-foothold-in-under-5-minutes.html
-785-Getting the goods with CrackMapExec: Part 2: https://byt3bl33d3r.github.io/tag/crackmapexec.html
-786-Bug Hunting Methodology (part-1): https://medium.com/p/91295b2d2066
-787-Exploring Cobalt Strike's ExternalC2 framework: https://blog.xpnsec.com/exploring-cobalt-strikes-externalc2-framework/
-788-Airbnb – When Bypassing JSON Encoding, XSS Filter, WAF, CSP, and Auditor turns into Eight Vulnerabilities: https://buer.haus/2017/03/08/airbnb-when-bypassing-json-encoding-xss-filter-waf-csp-and-auditor-turns-into-eight-vulnerabilities/
-789-Adversarial Tactics, Techniques & Common Knowledge: https://attack.mitre.org/wiki/Main_Page
-790-Bug Bounty — Tips / Tricks / JS (JavaScript Files): https://medium.com/p/bdde412ea49d
-791-Bug Bounty Hunting Tips #2 —Target their mobile apps (Android Edition): https://medium.com/p/f88a9f383fcc
-792-DiskShadow: The Return of VSS Evasion, Persistence, and Active Directory Database Extraction: https://bohops.com/2018/03/26/diskshadow-the-return-of-vss-evasion-persistence-and-active-directory-database-extraction/
-793-Executing Commands and Bypassing AppLocker with PowerShell Diagnostic Scripts: https://bohops.com/2018/01/07/executing-commands-and-bypassing-applocker-with-powershell-diagnostic-scripts/
-794-ClickOnce (Twice or Thrice): A Technique for Social Engineering and (Un)trusted Command Execution: https://bohops.com/2017/12/02/clickonce-twice-or-thrice-a-technique-for-social-engineering-and-untrusted-command-execution/
-795-Leveraging INF-SCT Fetch & Execute Techniques For Bypass, Evasion, & Persistence (Part 2): https://bohops.com/2018/03/10/leveraging-inf-sct-fetch-execute-techniques-for-bypass-evasion-persistence-part-2/
-796-DiskShadow: The Return of VSS Evasion, Persistence, and Active Directory Database Extraction: https://bohops.com/2018/03/26/diskshadow-the-return-of-vss-evasion-persistence-and-active-directory-database-extraction/
-797-Trust Direction: An Enabler for Active Directory Enumeration and Trust Exploitation: https://bohops.com/2017/12/02/trust-direction-an-enabler-for-active-directory-enumeration-and-trust-exploitation/
-798-DiskShadow: The Return of VSS Evasion, Persistence, and Active Directory Database Extraction: https://bohops.com/2018/03/26/diskshadow-the-return-of-vss-evasion-persistence-and-active-directory-database-extraction/
-799-Abusing Exported Functions and Exposed DCOM Interfaces for Pass-Thru Command Execution and Lateral Movement: https://bohops.com/2018/03/17/abusing-exported-functions-and-exposed-dcom-interfaces-for-pass-thru-command-execution-and-lateral-movement/
-800-Capcom Rootkit Proof-Of-Concept: https://www.fuzzysecurity.com/tutorials/28.html
-801-Linux Privilege Escalation using Misconfigured NFS: http://www.hackingarticles.in/linux-privilege-escalation-using-misconfigured-nfs/
-802-Beginners Guide for John the Ripper (Part 1): http://www.hackingarticles.in/beginner-guide-john-the-ripper-part-1/
-803-Working of Traceroute using Wireshark: http://www.hackingarticles.in/working-of-traceroute-using-wireshark/
-804-Multiple Ways to Get root through Writable File: http://www.hackingarticles.in/multiple-ways-to-get-root-through-writable-file/
-805-4 ways to SMTP Enumeration: http://www.hackingarticles.in/4-ways-smtp-enumeration
-806-4 ways to Hack MS SQL Login Password: http://www.hackingarticles.in/4-ways-to-hack-ms-sql-login-password
-807-4 Ways to Hack Telnet Passsword: http://www.hackingarticles.in/4-ways-to-hack-telnet-passsword
-808-5 ways to Brute Force Attack on WordPress Website: http://www.hackingarticles.in/5-ways-brute-force-attack-wordpress-website
-809-5 Ways to Crawl a Website: http://www.hackingarticles.in/5-ways-crawl-website
-810-Local Linux Enumeration & Privilege Escalation Cheatsheet: https://www.rebootuser.com/?p=1623
-811-The Drebin Dataset: https://www.sec.cs.tu-bs.de/~danarp/drebin/download.html
-812-ECMAScript 6 from an Attacker's Perspective - Breaking Frameworks, Sandboxes, and everything else: https://www.slideshare.net/x00mario/es6-en
-813-IT and Information Security Cheat Sheets: https://zeltser.com/cheat-sheets/
-814-Cheat Sheets - DFIR Training: https://www.dfir.training/cheat-sheets
-815-WinDbg Malware Analysis Cheat Sheet: https://oalabs.openanalysis.net/2019/02/18/windbg-for-malware-analysis/
-819-Cheat Sheet for Analyzing Malicious Software: https://www.prodefence.org/cheat-sheet-for-analyzing-malicious-software/
-820-Analyzing Malicious Documents Cheat Sheet - Prodefence: https://www.prodefence.org/analyzing-malicious-documents-cheat-sheet-2/
-821-Cheat Sheets - SANS Digital Forensics: https://digital-forensics.sans.org/community/cheat-sheets
-822-Linux Command Line Forensics and Intrusion Detection Cheat Sheet: https://www.sandflysecurity.com/blog/compromised-linux-cheat-sheet/
-823-Windows Registry Auditing Cheat Sheet: https://www.slideshare.net/Hackerhurricane/windows-registry-auditing-cheat-sheet-ver-jan-2016-malwarearchaeology
-824-Cheat Sheet of Useful Commands Every Kali Linux User Needs To Know: https://kennyvn.com/cheatsheet-useful-bash-commands-linux/
-825-kali-linux-cheatsheet: https://github.com/NoorQureshi/kali-linux-cheatsheet
-826-8 Best Kali Linux Terminal Commands used by Hackers (2019 Edition): https://securedyou.com/best-kali-linux-commands-terminal-hacking/
-827-Kali Linux Commands Cheat Sheet: https://www.pinterest.com/pin/393431717429496576/
-827-Kali Linux Commands Cheat Sheet A To Z: https://officialhacker.com/linux-commands-cheat-sheet/
-828-Linux commands CHEATSHEET for HACKERS: https://www.reddit.com/r/Kalilinux/.../linux_commands_cheatsheet_for_hackers/
-829-100 Linux Commands – A Brief Outline With Cheatsheet: https://fosslovers.com/100-linux-commands-cheatsheet/
-830-Kali Linux – Penetration Testing Cheat Sheet: https://uwnthesis.wordpress.com/2016/06/.../kali-linux-penetration-testing-cheat-sheet/
-831-Basic Linux Terminal Shortcuts Cheat Sheet : https://computingforgeeks.com/basic-linux-terminal-shortcuts-cheat-sheet/
-832-List Of 220+ Kali Linux and Linux Commands Line {Free PDF} : https://itechhacks.com/kali-linux-and-linux-commands/
-833-Transferring files from Kali to Windows (post exploitation): https://blog.ropnop.com/transferring-files-from-kali-to-windows/
-834-The Ultimate Penetration Testing Command Cheat Sheet for Kali Linux: https://www.hostingland.com/.../the-ultimate-penetration-testing-command-cheat-sheet
-835-What is penetration testing? 10 hacking tools the pros use: https://www.csoonline.com/article/.../17-penetration-testing-tools-the-pros-use.html
-836-Best Hacking Tools List for Hackers & Security Professionals in 2019: https://gbhackers.com/hacking-tools-list/
-837-ExploitedBunker PenTest Cheatsheet: https://exploitedbunker.com/articles/pentest-cheatsheet/
-838-How to use Zarp for penetration testing: https://www.techrepublic.com/article/how-to-use-zarp-for-penetration-testing/
-839-Wireless Penetration Testing Cheat Sheet; https://uceka.com/2014/05/12/wireless-penetration-testing-cheat-sheet/
-840-Pentest Cheat Sheets: https://www.cheatography.com/tag/pentest/
-841-40 Best Penetration Testing (Pen Testing) Tools in 2019: https://www.guru99.com/top-5-penetration-testing-tools.html
-842-Metasploit Cheat Sheet: https://www.hacking.land/2019/02/metasploit-cheat-sheet.html
-843-OSCP useful resources and tools; https://acknak.fr/en/articles/oscp-tools/
-844-Pentest + Exploit dev Cheatsheet: https://ehackings.com/all-posts/pentest-exploit-dev-cheatsheet/
-845-What is Penetration Testing? A Quick Guide for 2019: https://www.cloudwards.net/penetration-testing/
-846-Recon resource: https://pentester.land/cheatsheets/2019/04/15/recon-resources.html
-847-Network Recon Cheat Sheet: https://www.cheatography.com/coffeefueled/cheat-sheets/network-recon/
-848-Recon Cheat Sheets: https://www.cheatography.com/tag/recon/
-849-Penetration Testing Active Directory, Part II: https://hausec.com/2019/03/12/penetration-testing-active-directory-part-ii/
-850-Reverse-engineering Cheat Sheets: https://www.cheatography.com/tag/reverse-engineering/
-851-Reverse Engineering Cheat Sheet: https://www.scribd.com/doc/38163906/Reverse-Engineering-Cheat-Sheet
-852-ATOMBOMBING: BRAND NEW CODE INJECTION FOR WINDOWS: https://blog.ensilo.com/atombombing-brand-new-code-injection-for-windows
-853-PROPagate: http://www.hexacorn.com/blog/2017/10/26/propagate-a-new-code-injection-trick/
-854-Process Doppelgänging, by Tal Liberman and Eugene Kogan:: https://www.blackhat.com/docs/eu-17/materials/eu-17-Liberman-Lost-In-Transaction-Process-Doppelganging.pdf
-855-Gargoyle: https://jlospinoso.github.io/security/assembly/c/cpp/developing/software/2017/03/04/gargoyle-memory-analysis-evasion.html
-856-GHOSTHOOK: https://www.cyberark.com/threat-research-blog/ghosthook-bypassing-patchguard-processor-trace-based-hooking/
-857-Learn C: https://www.programiz.com/c-programming
-858-x86 Assembly Programming Tutorial: https://www.tutorialspoint.com/assembly_programming/
-859-Dr. Paul Carter's PC Assembly Language: http://pacman128.github.io/pcasm/
-860-Introductory Intel x86 - Architecture, Assembly, Applications, and Alliteration: http://opensecuritytraining.info/IntroX86.html
-861-x86 Disassembly: https://en.wikibooks.org/wiki/X86_Disassembly
-862-use-of-dns-tunneling-for-cc-communications-malware: https://securelist.com/use-of-dns-tunneling-for-cc-communications/78203/
-863-Using IDAPython to Make Your Life Easier (Series):: https://researchcenter.paloaltonetworks.com/2015/12/using-idapython-to-make-your-life-easier-part-1/
-864-NET binary analysis: https://cysinfo.com/cyber-attack-targeting-cbi-and-possibly-indian-army-officials/
-865-detailed analysis of the BlackEnergy3 big dropper: https://cysinfo.com/blackout-memory-analysis-of-blackenergy-big-dropper/
-866-detailed analysis of Uroburos rootkit: https://www.gdatasoftware.com/blog/2014/06/23953-analysis-of-uroburos-using-windbg
-867-TCP/IP and tcpdump Pocket Reference Guide: https://www.sans.org/security-resources/tcpip.pdf
-868-TCPDUMP Cheatsheet: http://packetlife.net/media/library/12/tcpdump.pdf
-869-Scapy Cheatsheet: http://packetlife.net/media/library/36/scapy.pdf
-870-WIRESHARK DISPLAY FILTERS: http://packetlife.net/media/library/13/Wireshark_Display_Filters.pdf
-871-Windows command line sheet: https://www.sans.org/security-resources/sec560/windows_command_line_sheet_v1.pdf
-872-Metasploit cheat sheet: https://www.sans.org/security-resources/sec560/misc_tools_sheet_v1.pdf
-873-IPv6 Cheatsheet: http://packetlife.net/media/library/8/IPv6.pdf
-874-IPv4 Subnetting: http://packetlife.net/media/library/15/IPv4_Subnetting.pdf
-875-IOS IPV4 ACCESS LISTS: http://packetlife.net/media/library/14/IOS_IPv4_Access_Lists.pdf
-876-Common Ports List: http://packetlife.net/media/library/23/common_ports.pdf
-877-WLAN: http://packetlife.net/media/library/4/IEEE_802.11_WLAN.pdf
-878-VLANs Cheatsheet: http://packetlife.net/media/library/20/VLANs.pdf
-879-VoIP Basics CheatSheet: http://packetlife.net/media/library/34/VOIP_Basics.pdf
-880-Google hacking and defense cheat sheet: https://www.sans.org/security-resources/GoogleCheatSheet.pdf
-881-Nmap CheatSheet: https://pen-testing.sans.org/blog/2013/10/08/nmap-cheat-sheet-1-0
-882-Netcat cheat sheet: https://www.sans.org/security-resources/sec560/netcat_cheat_sheet_v1.pdf
-883-PowerShell cheat sheet: https://blogs.sans.org/pen-testing/files/2016/05/PowerShellCheatSheet_v41.pdf
-884-Scapy cheat sheet POCKET REFERENCE: https://blogs.sans.org/pen-testing/files/2016/04/ScapyCheatSheet_v0.2.pdf
-885-SQL injection cheat sheet.: https://information.rapid7.com/sql-injection-cheat-sheet-download.html
-886-Injection cheat sheet: https://information.rapid7.com/injection-non-sql-cheat-sheet-download.html
-887-Symmetric Encryption Algorithms cheat sheet: https://www.cheatography.com/rubberdragonfarts/cheat-sheets/symmetric-encryption-algorithms/
-888-Intrusion Discovery Cheat Sheet v2.0 for Linux: https://pen-testing.sans.org/retrieve/linux-cheat-sheet.pdf
-889-Intrusion Discovery Cheat Sheet v2.0 for Window: https://pen-testing.sans.org/retrieve/windows-cheat-sheet.pdf
-890-Memory Forensics Cheat Sheet v1.2: https://digital-forensics.sans.org/media/memory-forensics-cheat-sheet.pdf
-891-CRITICAL LOG REVIEW CHECKLIST FOR SECURITY INCIDENTS G E N E R AL APPROACH: https://www.sans.org/brochure/course/log-management-in-depth/6
-892-Evidence collection cheat sheet: https://digital-forensics.sans.org/media/evidence_collection_cheat_sheet.pdf
-893-Hex file and regex cheat sheet v1.0: https://digital-forensics.sans.org/media/hex_file_and_regex_cheat_sheet.pdf
-894-Rekall Memory Forensic Framework Cheat Sheet v1.2.: https://digital-forensics.sans.org/media/rekall-memory-forensics-cheatsheet.pdf
-895-SIFT WORKSTATION Cheat Sheet v3.0.: https://digital-forensics.sans.org/media/sift_cheat_sheet.pdf
-896-Volatility Memory Forensic Framework Cheat Sheet: https://digital-forensics.sans.org/media/volatility-memory-forensics-cheat-sheet.pdf
-897-Hands - on Network Forensics.: https://www.first.org/resources/papers/conf2015/first_2015_-_hjelmvik-_erik_-_hands-on_network_forensics_20150604.pdf
-898-VoIP Security Vulnerabilities.: https://www.sans.org/reading-room/whitepapers/voip/voip-security-vulnerabilities-2036
-899-Incident Response: How to Fight Back: https://www.sans.org/reading-room/whitepapers/analyst/incident-response-fight-35342
-900-BI-7_VoIP_Analysis_Fundamentals: https://sharkfest.wireshark.org/sharkfest.12/presentations/BI-7_VoIP_Analysis_Fundamentals.pdf
-901-Bug Hunting Guide: cybertheta.blogspot.com/2018/08/bug-hunting-guide.html
-902-Guide 001 |Getting Started in Bug Bounty Hunting: https://whoami.securitybreached.org/2019/.../guide-getting-started-in-bug-bounty-hun...
-903-SQL injection cheat sheet : https://portswigger.net › Web Security Academy › SQL injection › Cheat sheet
-904-RSnake's XSS Cheat Sheet: https://www.in-secure.org/2018/08/22/rsnakes-xss-cheat-sheet/
-905-Bug Bounty Tips (2): https://ctrsec.io/index.php/2019/03/20/bug-bounty-tips-2/
-906-A Review of my Bug Hunting Journey: https://kongwenbin.com/a-review-of-my-bug-hunting-journey/
-907-Meet the First Hacker Millionaire on HackerOne: https://itblogr.com/meet-the-first-hacker-millionaire-on-hackerone/
-908-XSS Cheat Sheet: https://www.reddit.com/r/programming/comments/4sn54s/xss_cheat_sheet/
-909-Bug Bounty Hunter Methodology: https://www.slideshare.net/bugcrowd/bug-bounty-hunter-methodology-nullcon-2016
-910-#10 Rules of Bug Bounty: https://hackernoon.com/10-rules-of-bug-bounty-65082473ab8c
-911-Bugbounty Checklist: https://www.excis3.be/bugbounty-checklist/21/
-912-FireBounty | The Ultimate Bug Bounty List!: https://firebounty.com/
-913-Brutelogic xss cheat sheet 2019: https://brutelogic.com.br/blog/ebook/xss-cheat-sheet/
-914-XSS Cheat Sheet by Rodolfo Assis: https://leanpub.com/xss
-915-Cross-Site-Scripting (XSS) – Cheat Sheet: https://ironhackers.es/en/cheatsheet/cross-site-scripting-xss-cheat-sheet/
-916-XSS Cheat Sheet V. 2018 : https://hackerconnected.wordpress.com/2018/03/15/xss-cheat-sheet-v-2018/
-917-Cross-site Scripting Payloads Cheat Sheet : https://exploit.linuxsec.org/xss-payloads-list
-918-Xss Cheat Sheet : https://www.in-secure.org/tag/xss-cheat-sheet/
-919-Open Redirect Cheat Sheet : https://pentester.land/cheatsheets/2018/11/02/open-redirect-cheatsheet.html
-920-XSS, SQL Injection and Fuzzing Bar Code Cheat Sheet: https://www.irongeek.com/xss-sql-injection-fuzzing-barcode-generator.php
-921-XSS Cheat Sheet: https://tools.paco.bg/13/
-922-XSS for ASP.net developers: https://www.gosecure.net/blog/2016/03/22/xss-for-asp-net-developers
-923-Cross-Site Request Forgery Cheat Sheet: https://trustfoundry.net/cross-site-request-forgery-cheat-sheet/
-924-CSRF Attacks: Anatomy, Prevention, and XSRF Tokens: https://www.acunetix.com/websitesecurity/csrf-attacks/
-925-Cross-Site Request Forgery (CSRF) Prevention Cheat Sheet : https://mamchenkov.net/.../05/.../cross-site-request-forgery-csrf-prevention-cheat-shee...
-926-Guide to CSRF (Cross-Site Request Forgery): https://www.veracode.com/security/csrf
-927-Cross-site Request Forgery - Exploitation & Prevention: https://www.netsparker.com/blog/web-security/csrf-cross-site-request-forgery/
-928-SQL Injection Cheat Sheet : https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/
-929-MySQL SQL Injection Practical Cheat Sheet: https://www.perspectiverisk.com/mysql-sql-injection-practical-cheat-sheet/
-930-SQL Injection (SQLi) - Cheat Sheet, Attack Examples & Protection: https://www.checkmarx.com/knowledge/knowledgebase/SQLi
-931-SQL injection attacks: A cheat sheet for business pros: https://www.techrepublic.com/.../sql-injection-attacks-a-cheat-sheet-for-business-pros/
-932-The SQL Injection Cheat Sheet: https://biztechmagazine.com/article/.../guide-combatting-sql-injection-attacks-perfcon
-933-SQL Injection Cheat Sheet: https://resources.infosecinstitute.com/sql-injection-cheat-sheet/
-934-Comprehensive SQL Injection Cheat Sheet: https://www.darknet.org.uk/2007/05/comprehensive-sql-injection-cheat-sheet/
-935-MySQL SQL Injection Cheat Sheet: pentestmonkey.net/cheat-sheet/sql-injection/mysql-sql-injection-cheat-sheet
-936-SQL Injection Cheat Sheet: MySQL: https://www.gracefulsecurity.com/sql-injection-cheat-sheet-mysql/
-937- MySQL Injection Cheat Sheet: https://www.asafety.fr/mysql-injection-cheat-sheet/
-938-SQL Injection Cheat Sheet: https://www.reddit.com/r/netsec/comments/7l449h/sql_injection_cheat_sheet/
-939-Google dorks cheat sheet 2019: https://sanfrantokyo.com/pph5/yxo7.php?xxx=5&lf338=google...cheat-sheet-2019
-940-Command Injection Cheatsheet : https://hackersonlineclub.com/command-injection-cheatsheet/
-941-OS Command Injection Vulnerability: https://www.immuniweb.com/vulnerability/os-command-injection.html
-942-OS Command Injection: https://www.checkmarx.com/knowledge/knowledgebase/OS-Command_Injection
-943-Command Injection: The Good, the Bad and the Blind: https://www.gracefulsecurity.com/command-injection-the-good-the-bad-and-the-blind/
-944-OS command injection: https://portswigger.net › Web Security Academy › OS command injection
-945-How to Test for Command Injection: https://blog.securityinnovation.com/blog/.../how-to-test-for-command-injection.html
-946-Data Exfiltration via Blind OS Command Injection: https://www.contextis.com/en/blog/data-exfiltration-via-blind-os-command-injection
-947-XXE Cheatsheet: https://www.gracefulsecurity.com/xxe-cheatsheet/
-948-bugbounty-cheatsheet/xxe.: https://github.com/EdOverflow/bugbounty-cheatsheet/blob/master/cheatsheets/xxe.md
-949-XXE - Information Security: https://phonexicum.github.io/infosec/xxe.html
-950-XXE Cheat Sheet: https://www.hahwul.com/p/xxe-cheat-sheet.html
-951-Advice From A Researcher: Hunting XXE For Fun and Profit: https://www.bugcrowd.com/blog/advice-from-a-bug-hunter-xxe/
-952-Out of Band Exploitation (OOB) CheatSheet : https://www.notsosecure.com/oob-exploitation-cheatsheet/
-953-Web app penentration testing checklist and cheatsheet: www.malwrforensics.com/.../web-app-penentration-testing-checklist-and-cheatsheet-with-example
-954-Useful Resources: https://lsdsecurity.com/useful-resources/
-955-Exploiting XXE Vulnerabilities in IIS/.NET: https://pen-testing.sans.org/.../entity-inception-exploiting-iis-net-with-xxe-vulnerabiliti...
-956-Top 65 OWASP Cheat Sheet Collections - ALL IN ONE: https://www.yeahhub.com/top-65-owasp-cheat-sheet-collections-all-in-one/
-957-Hacking Resources: https://www.torontowebsitedeveloper.com/hacking-resources
-958-Out of Band XML External Entity Injection: https://www.netsparker.com/web...scanner/.../out-of-band-xml-external-entity-injectio...
-959-XXE - ZeroSec - Adventures In Information Security: https://blog.zsec.uk/out-of-band-xxe-2/
-960-Blog - Automated Data Exfiltration with XXE: https://blog.gdssecurity.com/labs/2015/4/.../automated-data-exfiltration-with-xxe.html
-961-My Experience during Infosec Interviews: https://medium.com/.../my-experience-during-infosec-interviews-ed1f74ce41b8
-962-Top 10 Security Risks on the Web (OWASP): https://sensedia.com/.../top-10-security-risks-on-the-web-owasp-and-how-to-mitigate-t...
-963-Antivirus Evasion Tools [Updated 2019] : https://resources.infosecinstitute.com/antivirus-evasion-tools/
-964-Adventures in Anti-Virus Evasion: https://www.gracefulsecurity.com/anti-virus-evasion/
-965-Antivirus Bypass Phantom Evasion - 2019 : https://www.reddit.com/r/Kalilinux/.../antivirus_bypass_phantom_evasion_2019/
-966-Antivirus Evasion with Python: https://medium.com/bugbountywriteup/antivirus-evasion-with-python-49185295caf1
-967-Windows oneliners to get shell: https://ironhackers.es/en/cheatsheet/comandos-en-windows-para-obtener-shell/
-968-Does Veil Evasion Still Work Against Modern AntiVirus?: https://www.hackingloops.com/veil-evasion-virustotal/
-969-Google dorks cheat sheet 2019 : https://sanfrantokyo.com/pph5/yxo7.php?xxx=5&lf338=google...cheat-sheet-2019
-970-Malware Evasion Techniques : https://www.slideshare.net/ThomasRoccia/malware-evasion-techniques
-971-How to become a cybersecurity pro: A cheat sheet: https://www.techrepublic.com/article/cheat-sheet-how-to-become-a-cybersecurity-pro/
-972-Bypassing Antivirus With Ten Lines of Code: https://hackingandsecurity.blogspot.com/.../bypassing-antivirus-with-ten-lines-of.html
-973-Bypassing antivirus detection on a PDF exploit: https://www.digital.security/en/blog/bypassing-antivirus-detection-pdf-exploit
-974-Generating Payloads & Anti-Virus Bypass Methods: https://uceka.com/2014/02/19/generating-payloads-anti-virus-bypass-methods/
-975-Apkwash Android Antivirus Evasion For Msfvemon: https://hackingarise.com/apkwash-android-antivirus-evasion-for-msfvemon/
-976-Penetration Testing with Windows Computer & Bypassing an Antivirus: https://www.prodefence.org/penetration-testing-with-windows-computer-bypassing-antivirus
-978-Penetration Testing: The Quest For Fully UnDetectable Malware: https://www.foregenix.com/.../penetration-testing-the-quest-for-fully-undetectable-malware
-979-AVET: An AntiVirus Bypassing tool working with Metasploit Framework : https://githacktools.blogspot.com
-980-Creating an undetectable payload using Veil-Evasion Toolkit: https://www.yeahhub.com/creating-undetectable-payload-using-veil-evasion-toolkit/
-981-Evading Antivirus : https://sathisharthars.com/tag/evading-antivirus/
-982-AVPASS – All things in moderation: https://hydrasky.com/mobile-security/avpass/
-983-Complete Penetration Testing & Hacking Tools List: https://cybarrior.com/blog/2019/03/31/hacking-tools-list/
-984-Modern red teaming: 21 resources for your security team: https://techbeacon.com/security/modern-red-teaming-21-resources-your-security-team
-985-BloodHound and CypherDog Cheatsheet : https://hausec.com/2019/04/15/bloodhound-and-cypherdog-cheatsheet/
-986-Redteam Archives: https://ethicalhackingguru.com/category/redteam/
-987-NMAP Commands Cheat Sheet: https://www.networkstraining.com/nmap-commands-cheat-sheet/
-988-Nmap Cheat Sheet: https://dhound.io/blog/nmap-cheatsheet
-989-Nmap Cheat Sheet: From Discovery to Exploits: https://resources.infosecinstitute.com/nmap-cheat-sheet/
-990-Nmap Cheat Sheet and Pro Tips: https://hackertarget.com/nmap-cheatsheet-a-quick-reference-guide/
-991-Nmap Tutorial: from the Basics to Advanced Tips: https://hackertarget.com/nmap-tutorial/
-992-How to run a complete network scan with OpenVAS; https://www.techrepublic.com/.../how-to-run-a-complete-network-scan-with-openvas/
-993-Nmap: my own cheatsheet: https://www.andreafortuna.org/2018/03/12/nmap-my-own-cheatsheet/
-994-Top 32 Nmap Command Examples For Linux Sys/Network Admins: https://www.cyberciti.biz/security/nmap-command-examples-tutorials/
-995-35+ Best Free NMap Tutorials and Courses to Become Pro Hacker: https://www.fromdev.com/2019/01/best-free-nmap-tutorials-courses.html
-996-Scanning Tools: https://widesecurity.net/kali-linux/kali-linux-tools-scanning/
-997-Nmap - Cheatsheet: https://www.ivoidwarranties.tech/posts/pentesting-tuts/nmap/cheatsheet/
-998-Linux for Network Engineers: https://netbeez.net/blog/linux-how-to-use-nmap/
-999-Nmap Cheat Sheet: https://www.hackingloops.com/nmap-cheat-sheet-port-scanning-basics-ethical-hackers/
-1000-Tactical Nmap for Beginner Network Reconnaissance: https://null-byte.wonderhowto.com/.../tactical-nmap-for-beginner-network-reconnaiss...
-1001-A Guide For Google Hacking Database: https://www.hackgentips.com/google-hacking-database/
-1002-2019 Data Breaches - The Worst Breaches, So Far: https://www.identityforce.com/blog/2019-data-breaches
-1003-15 Vulnerable Sites To (Legally) Practice Your Hacking Skills: https://www.checkmarx.com/.../15-vulnerable-sites-to-legally-practice-your-hacking-skills
-1004-Google Hacking Master List : https://it.toolbox.com/blogs/rmorril/google-hacking-master-list-111408
-1005-Smart searching with googleDorking | Exposing the Invisible: https://exposingtheinvisible.org/guides/google-dorking/
-1006-Google Dorks 2019: https://korben.info/google-dorks-2019-liste.html
-1007-Google Dorks List and how to use it for Good; https://edgy.app/google-dorks-list
-1008-How to Use Google to Hack(Googledorks): https://null-byte.wonderhowto.com/how-to/use-google-hack-googledorks-0163566/
-1009-Using google as hacking tool: https://cybertechies007.blogspot.com/.../using-google-as-hacking-tool-googledorks.ht...
-1010-#googledorks hashtag on Twitter: https://twitter.com/hashtag/googledorks
-1011-Top Five Open Source Intelligence (OSINT) Tools: https://resources.infosecinstitute.com/top-five-open-source-intelligence-osint-tools/
-1012-What is open-source intelligence (OSINT)?: https://www.microfocus.com/en-us/what-is/open-source-intelligence-osint
-1013-A Guide to Open Source Intelligence Gathering (OSINT): https://medium.com/bugbountywriteup/a-guide-to-open-source-intelligence-gathering-osint-ca831e13f29c
-1014-OSINT: How to find information on anyone: https://medium.com/@Peter_UXer/osint-how-to-find-information-on-anyone-5029a3c7fd56
-1015-What is OSINT? How can I make use of it?: https://securitytrails.com/blog/what-is-osint-how-can-i-make-use-of-it
-1016-OSINT Tools for the Dark Web: https://jakecreps.com/2019/05/16/osint-tools-for-the-dark-web/
-1017-A Guide to Open Source Intelligence (OSINT): https://www.cjr.org/tow_center_reports/guide-to-osint-and-hostile-communities.php
-1018-An Introduction To Open Source Intelligence (OSINT): https://www.secjuice.com/introduction-to-open-source-intelligence-osint/
-1019-SSL & TLS HTTPS Testing [Definitive Guide] - Aptive: https://www.aptive.co.uk/blog/tls-ssl-security-testing/
-1020-Exploit Title: [Files Containing E-mail and Associated Password Lists]: https://www.exploit-db.com/ghdb/4262/?source=ghdbid
-1021-cheat_sheets: http://zachgrace.com/cheat_sheets/
-1022-Intel SYSRET: https://pentestlab.blog/2017/06/14/intel-sysret
-1023-Windows Preventive Maintenance Best Practices: http://www.professormesser.com/free-a-plus-training/220-902/windows-preventive-maintenance-best-practices/
-1024-An Overview of Storage Devices: http://www.professormesser.com/?p=19367
-1025-An Overview of RAID: http://www.professormesser.com/?p=19373
-1026-How to Troubleshoot: http://www.professormesser.com/free-a-plus-training/220-902/how-to-troubleshoot/
-1027-Mobile Device Security Troubleshooting: http://www.professormesser.com/free-a-plus-training/220-902/mobile-device-security-troubleshooting/
-1028-Using Wireshark: Identifying Hosts and Users: https://unit42.paloaltonetworks.com/using-wireshark-identifying-hosts-and-users/
-1029-Using Wireshark - Display Filter Expressions: https://unit42.paloaltonetworks.com/using-wireshark-display-filter-expressions/
-1030-Decrypting SSL/TLS traffic with Wireshark: https://resources.infosecinstitute.com/decrypting-ssl-tls-traffic-with-wireshark/
-1031-A collection of handy Bash One-Liners and terminal tricks for data processing and Linux system maintenance.: https://onceupon.github.io/Bash-Oneliner/
-1032- Bash One-Liners Explained, Part I: Working with files : https://catonmat.net/bash-one-liners-explained-part-one
-1033-Bash One-Liners Explained, Part IV: Working with history: https://catonmat.net/bash-one-liners-explained-part-four
-1034-Useful bash one-liners : https://github.com/stephenturner/oneliners
-1035-Some Random One-liner Linux Commands [Part 1]: https://www.ostechnix.com/random-one-liner-linux-commands-part-1/
-1036-The best terminal one-liners from and for smart admins + devs.: https://www.ssdnodes.com/tools/one-line-wise/
-1037-Shell one-liner: https://rosettacode.org/wiki/Shell_one-liner#Racket
-1038-SSH Cheat Sheet: http://pentestmonkey.net/tag/ssh
-1039-7000 Google Dork List: https://pastebin.com/raw/Tdvi8vgK
-1040-GOOGLE HACKİNG DATABASE – GHDB: https://pastebin.com/raw/1ndqG7aq
-1041-STEALING PASSWORD WITH GOOGLE HACK: https://pastebin.com/raw/x6BNZ7NN
-1042-Hack Remote PC with PHP File using PhpSploit Stealth Post-Exploitation Framework: http://www.hackingarticles.in/hack-remote-pc-with-php-file-using-phpsploit-stealth-post-exploitation-framework
-1043-Open Source database of android malware: www.code.google.com/archive/p/androguard/wikis/DatabaseAndroidMalwares.wiki
-1044-big-list-of-naughty-strings: https://github.com/minimaxir/big-list-of-naughty-strings/blob/master/blns.txt
-1045-publicly available cap files: http://www.netresec.com/?page=PcapFiles
-1046-“Insertion, Evasion, and Denial of Service: Eluding Network Intrusion Detection”: http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.119.399&rep=rep1&type=pdf
-1047-Building a malware analysis toolkit: https://zeltser.com/build-malware-analysis-toolkit/
-1048-Netcat Reverse Shell Cheat Sheet: http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
-1049-Packers and crypters: http://securityblog.gr/2950/detect-packers-cryptors-and-compilers/
-1050-Evading antivirus: http://www.blackhillsinfosec.com/?p=5094
-1051-cheat sheets and information,The Art of Hacking: https://github.com/The-Art-of-Hacking
-1052-Error-based SQL injection: https://www.exploit-db.com/docs/37953.pdf
-1053-XSS cheat sheet: https://www.veracode.com/security/xss
-1054-Active Directory Enumeration with PowerShell: https://www.exploit-db.com/docs/46990
-1055-Buffer Overflows, C Programming, NSA GHIDRA and More: https://www.exploit-db.com/docs/47032
-1056-Analysis of CVE-2019-0708 (BlueKeep): https://www.exploit-db.com/docs/46947
-1057-Windows Privilege Escalations: https://www.exploit-db.com/docs/46131
-1058-The Ultimate Guide For Subdomain Takeover with Practical: https://www.exploit-db.com/docs/46415
-1059-File transfer skills in the red team post penetration test: https://www.exploit-db.com/docs/46515
-1060-How To Exploit PHP Remotely To Bypass Filters & WAF Rules: https://www.exploit-db.com/docs/46049
-1061-Flying under the radar: https://www.exploit-db.com/docs/45898
-1062-what is google hacking? and why it is useful ?and how you can learn how to use it: https://twitter.com/cry__pto/status/1142497470825545729?s=20
-1063-useful blogs for penetration testers: https://twitter.com/cry__pto/status/1142497470825545729?s=20
-1064-useful #BugBounty resources & links & tutorials & explanations & writeups :: https://twitter.com/cry__pto/status/1143965322233483265?s=20
-1065-Union- based SQL injection: http://securityidiots.com/Web-Pentest/SQL-Injection/Basic-Union-Based-SQL-Injection.html
-1066-Broken access control: https://www.happybearsoftware.com/quick-check-for-access-control-vulnerabilities-in-rails
-1067-Understanding firewall types and configurations: http://searchsecurity.techtarget.com/feature/The-five-different-types-of-firewalls
-1068-5 Kali Linux tricks that you may not know: https://pentester.land/tips-n-tricks/2018/11/09/5-kali-linux-tricks-that-you-may-not-know.html
-1069-5 tips to make the most of Twitter as a pentester or bug bounty hunter: https://pentester.land/tips-n-tricks/2018/10/23/5-tips-to-make-the-most-of-twitter-as-a-pentester-or-bug-bounty-hunter.html
-1060-A Guide To Subdomain Takeovers: https://www.hackerone.com/blog/Guide-Subdomain-Takeovers
-1061-Advanced Recon Automation (Subdomains) case 1: https://medium.com/p/9ffc4baebf70
-1062-Security testing for REST API with w3af: https://medium.com/quick-code/security-testing-for-rest-api-with-w3af-2c43b452e457?source=post_recirc---------0------------------
-1062-The Lazy Hacker: https://securit.ie/blog/?p=86
-1063-Practical recon techniques for bug hunters & pen testers: https://github.com/appsecco/practical-recon-levelup0x02/raw/200c43b58e9bf528a33c9dfa826fda89b229606c/practical_recon.md
-1064-A More Advanced Recon Automation #1 (Subdomains): https://poc-server.com/blog/2019/01/18/advanced-recon-subdomains/
-1065-Expanding your scope (Recon automation #2): https://poc-server.com/blog/2019/01/31/expanding-your-scope-recon-automation/
-1066-RCE by uploading a web.config: https://poc-server.com/blog/2018/05/22/rce-by-uploading-a-web-config/
-1067-Finding and exploiting Blind XSS: https://enciphers.com/finding-and-exploiting-blind-xss/
-1068-Google dorks list 2018: http://conzu.de/en/google-dork-liste-2018-conzu
-1096-Out of Band Exploitation (OOB) CheatSheet: https://www.notsosecure.com/oob-exploitation-cheatsheet/
-1070-Metasploit Cheat Sheet: https://nitesculucian.github.io/2018/12/01/metasploit-cheat-sheet/
-1071-Linux Post Exploitation Cheat Sheet : red-orbita.com/?p=8455
-1072-OSCP/Pen Testing Resources : https://medium.com/@sdgeek/oscp-pen-testing-resources-271e9e570d45
-1073-Out Of Band Exploitation (OOB) CheatSheet : https://packetstormsecurity.com/files/149290/Out-Of-Band-Exploitation-OOB-CheatSheet.html
-1074-HTML5 Security Cheatsheet: https://html5sec.org/
-1075-Kali Linux Cheat Sheet for Penetration Testers: https://www.blackmoreops.com/2016/12/20/kali-linux-cheat-sheet-for-penetration-testers/
-1076-Responder - CheatSheet: https://www.ivoidwarranties.tech/posts/pentesting-tuts/responder/cheatsheet/
-1076-Windows Post-Exploitation Command List: pentest.tonyng.net/windows-post-exploitation-command-list/
-1077-Transfer files (Post explotation) - CheatSheet: https://ironhackers.es/en/cheatsheet/transferir-archivos-post-explotacion-cheatsheet/
-1078-SQL Injection Cheat Sheet: MSSQL — GracefulSecurity: https://www.gracefulsecurity.com/sql-injection-cheat-sheet-mssql/
-1079-OSCP useful resources and tools: https://acknak.fr/en/articles/oscp-tools/
-1080-Penetration Testing 102 - Windows Privilege Escalation - Cheatsheet: www.exumbraops.com/penetration-testing-102-windows-privilege-escalation-cheatsheet
-1081-Transferring files from Kali to Windows (post exploitation) : https://blog.ropnop.com/transferring-files-from-kali-to-windows/
-1082-Hack Like a Pro: The Ultimate Command Cheat Sheet for Metasploit: https://null-byte.wonderhowto.com/.../hack-like-pro-ultimate-command-cheat-sheet-f...
-1083-OSCP Goldmine (not clickbait): 0xc0ffee.io/blog/OSCP-Goldmine
-1084-Privilege escalation: Linux : https://vulp3cula.gitbook.io/hackers-grimoire/post-exploitation/privesc-linux
-1085-Exploitation Tools Archives : https://pentesttools.net/category/exploitationtools/
-1086-From Local File Inclusion to Remote Code Execution - Part 1: https://outpost24.com/blog/from-local-file-inclusion-to-remote-code-execution-part-1
-1087-Basic Linux Privilege Escalation: https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/
-1088-Title: Ultimate Directory Traversal & Path Traversal Cheat Sheet: www.vulnerability-lab.com/resources/documents/587.txt
-1089-Binary Exploitation: https://pwndevils.com/hacking/howtwohack.html
-1090-A guide to Linux Privilege Escalation: https://payatu.com/guide-linux-privilege-escalation/
-1091-Penetration Testing Tools Cheat Sheet : https://news.ycombinator.com/item?id=11977304
-1092-List of Metasploit Commands - Cheatsheet: https://thehacktoday.com/metasploit-commands/
-1093-A journey into Radare 2 – Part 2: Exploitation: https://www.megabeets.net/a-journey-into-radare-2-part-2/
-1094-Remote Code Evaluation (Execution) Vulnerability: https://www.netsparker.com/blog/web-security/remote-code-evaluation-execution/
-1095-Exploiting Python Code Injection in Web Applications: https://www.securitynewspaper.com/.../exploiting-python-code-injection-web-applicat...
-1096-Shells · Total OSCP Guide: https://sushant747.gitbooks.io/total-oscp-guide/reverse-shell.html
-1097-MongoDB Injection cheat sheet Archives: https://blog.securelayer7.net/tag/mongodb-injection-cheat-sheet/
-1098-Basic Shellshock Exploitation: https://blog.knapsy.com/blog/2014/10/07/basic-shellshock-exploitation/
-1099-Wireshark Tutorial and Tactical Cheat Sheet : https://hackertarget.com/wireshark-tutorial-and-cheat-sheet/
-1100-Windows Command Line cheatsheet (part 2): https://www.andreafortuna.org/2017/.../windows-command-line-cheatsheet-part-2-wm...
-1101-Detecting WMI exploitation: www.irongeek.com/i.php?page=videos/derbycon8/track-3-03...exploitation...
-1102-Metasploit Cheat Sheet - Hacking Land : https://www.hacking.land/2019/02/metasploit-cheat-sheet.html
-1103-5 Practical Scenarios for XSS Attacks: https://pentest-tools.com/blog/xss-attacks-practical-scenarios/
-1104-Ultimate gdb cheat sheet: http://nadavclaudecohen.com/2017/10/10/ultimate-gdb-cheat-sheet/
-1105-Reverse Engineering Cheat Sheet: https://www.scribd.com/doc/38163906/Reverse-Engineering-Cheat-Sheet
-1106-Reverse Engineering Cheat Sheet: https://www.scribd.com/document/94575179/Reverse-Engineering-Cheat-Sheet
-1107-Reverse Engineering For Malware Analysis: https://eforensicsmag.com/reverse_engi_cheatsheet/
-1108-Reverse-engineering Cheat Sheets : https://www.cheatography.com/tag/reverse-engineering/
-1109-Shortcuts for Understanding Malicious Scripts: https://www.linkedin.com/pulse/shortcuts-understanding-malicious-scripts-viviana-ross
-1110-WinDbg Malware Analysis Cheat Sheet : https://oalabs.openanalysis.net/2019/02/18/windbg-for-malware-analysis/
-1111-Cheat Sheet for Malware Analysis: https://www.andreafortuna.org/2016/08/16/cheat-sheet-for-malware-analysis/
-1112-Tips for Reverse-Engineering Malicious Code : https://www.digitalmunition.me/tips-reverse-engineering-malicious-code-new-cheat-sheet
-1113-Cheatsheet for radare2 : https://leungs.xyz/reversing/2018/04/16/radare2-cheatsheet.html
-1114-Reverse Engineering Cheat Sheets: https://www.pinterest.com/pin/576390452300827323/
-1115-Reverse Engineering Resources-Beginners to intermediate Guide/Links: https://medium.com/@vignesh4303/reverse-engineering-resources-beginners-to-intermediate-guide-links-f64c207505ed
-1116-Malware Resources : https://www.professor.bike/malware-resources
-1117-Zero-day exploits: A cheat sheet for professionals: https://www.techrepublic.com/article/zero-day-exploits-the-smart-persons-guide/
-1118-Getting cozy with exploit development: https://0x00sec.org/t/getting-cozy-with-exploit-development/5311
-1119-appsec - Web Security Cheatsheet : https://security.stackexchange.com/questions/2985/web-security-cheatsheet-todo-list
-1120-PEDA - Python Exploit Development Assistance For GDB: https://www.pinterest.ru/pin/789044797190775841/
-1121-Exploit Development Introduction (part 1) : https://www.cybrary.it/video/exploit-development-introduction-part-1/
-1122-Windows Exploit Development: A simple buffer overflow example: https://medium.com/bugbountywriteup/windows-expliot-dev-101-e5311ac284a
-1123-Exploit Development-Everything You Need to Know: https://null-byte.wonderhowto.com/how-to/exploit-development-everything-you-need-know-0167801/
-1124-Exploit Development : https://0x00sec.org/c/exploit-development
-1125-Exploit Development - Infosec Resources: https://resources.infosecinstitute.com/category/exploit-development/
-1126-Exploit Development : https://www.reddit.com/r/ExploitDev/
-1127-A Study in Exploit Development - Part 1: Setup and Proof of Concept : https://www.anitian.com/a-study-in-exploit-development-part-1-setup-and-proof-of-concept
-1128-Exploit Development for Beginners: https://www.youtube.com/watch?v=tVDuuz60KKc
-1129-Introduction to Exploit Development: https://www.fuzzysecurity.com/tutorials/expDev/1.html
-1130-Exploit Development And Reverse Engineering: https://www.immunitysec.com/services/exploit-dev-reverse-engineering.html
-1131-wireless forensics: https://www.sans.org/reading-room/whitepapers/wireless/80211-network-forensic-analysis-33023
-1132-fake AP Detection: https://www.sans.org/reading-room/whitepapers/detection/detecting-preventing-rogue-devices-network-1866
-1133-In-Depth analysis of SamSam Ransomware: https://www.crowdstrike.com/blog/an-in-depth-analysis-of-samsam-ransomware-and-boss-spider/
-1134-WannaCry ransomware: https://www.endgame.com/blog/technical-blog/wcrywanacry-ransomware-technical-analysis
-1135-malware analysis: https://www.sans.org/reading-room/whitepapers/malicious/paper/2103
-1136-Metasploit's detailed communication and protocol writeup: https://www.exploit-db.com/docs/english/27935-metasploit---the-exploit-learning-tree.pdf
-1137-Metasploit's SSL-generation module:: https://github.com/rapid7/metasploit-framework/blob/76954957c740525cff2db5a60bcf936b4ee06c42/lib/rex/post/meterpreter/client.rb
-1139-Empire IOCs:: https://www.sans.org/reading-room/whitepapers/detection/disrupting-empire-identifying-powershell-empire-command-control-activity-38315
-1140-excellent free training on glow analysis: http://opensecuritytraining.info/Flow.html
-1141-NetFlow using Silk: https://tools.netsa.cert.org/silk/analysis-handbook.pdf
-1142-Deep Packet Inspection: https://is.muni.cz/th/ql57c/dp-svoboda.pdf
-1143-Detecting Behavioral Personas with OSINT and Datasploit: https://www.exploit-db.com/docs/45543
-1144-WordPress Penetration Testing using WPScan and MetaSploit: https://www.exploit-db.com/docs/45556
-1145-Bulk SQL Injection using Burp-to-SQLMap: https://www.exploit-db.com/docs/45428
-1146-XML External Entity Injection - Explanation and Exploitation: https://www.exploit-db.com/docs/45374
-1147- Web Application Firewall (WAF) Evasion Techniques #3 (CloudFlare and ModSecurity OWASP CRS3): https://www.exploit-db.com/docs/45368
-1148-File Upload Restrictions Bypass: https://www.exploit-db.com/docs/45074
-1149-VLAN Hopping Attack: https://www.exploit-db.com/docs/45050
-1150-Jigsaw Ransomware Analysis using Volatility: https://medium.com/@0xINT3/jigsaw-ransomware-analysis-using-volatility-2047fc3d9be9
-1151-Ransomware early detection by the analysis of file sharing traffic: https://www.sciencedirect.com/science/article/pii/S108480451830300X
-1152-Do You Think You Can Analyse Ransomware?: https://medium.com/asecuritysite-when-bob-met-alice/do-you-think-you-can-analyse-ransomware-bbc813b95529
-1153-Analysis of LockerGoga Ransomware : https://labsblog.f-secure.com/2019/03/27/analysis-of-lockergoga-ransomware/
-1154-Detection and Forensic Analysis of Ransomware Attacks : https://www.netfort.com/assets/NetFort-Ransomware-White-Paper.pdf
-1155-Bad Rabbit Ransomware Technical Analysis: https://logrhythm.com/blog/bad-rabbit-ransomware-technical-analysis/
-1156-NotPetya Ransomware analysis : https://safe-cyberdefense.com/notpetya-ransomware-analysis/
-1157-Identifying WannaCry on Your Server Using Logs: https://www.loggly.com/blog/identifying-wannacry-server-using-logs/
-1158-The past, present, and future of ransomware: https://www.itproportal.com/features/the-past-present-and-future-of-ransomware/
-1159-The dynamic analysis of WannaCry ransomware : https://ieeexplore.ieee.org/iel7/8318543/8323471/08323682.pdf
-1160-Malware Analysis: Ransomware - SlideShare: https://www.slideshare.net/davidepiccardi/malware-analysis-ransomware
-1161-Article: Anatomy of ransomware malware: detection, analysis : https://www.inderscience.com/info/inarticle.php?artid=84399
-1162-Tracking desktop ransomware payments : https://www.blackhat.com/docs/us-17/wednesday/us-17-Invernizzi-Tracking-Ransomware-End-To-End.pdf
-1163-What is Ransomware? Defined, Explained, and Explored: https://www.forcepoint.com/cyber-edu/ransomware
-1164-Detect and Recover from Ransomware Attacks: https://www.indexengines.com/ransomware
-1165-Wingbird rootkit analysis: https://artemonsecurity.blogspot.com/2017/01/wingbird-rootkit-analysis.html
-1166-Windows Kernel Rootkits: Techniques and Analysis: https://www.offensivecon.org/trainings/2019/windows-kernel-rootkits-techniques-and-analysis.html
-1167-Rootkit: What is a Rootkit and How to Detect It : https://www.veracode.com/security/rootkit
-1168-Dissecting Turla Rootkit Malware Using Dynamic Analysis: https://www.lastline.com/.../dissecting-turla-rootkit-malware-using-dynamic-analysis/
-1169-Rootkits and Rootkit Detection (Windows Forensic Analysis) Part 2: https://what-when-how.com/windows-forensic-analysis/rootkits-and-rootkit-detection-windows-forensic-analysis-part-2/
-1170-ZeroAccess – an advanced kernel mode rootkit : https://www.botnetlegalnotice.com/ZeroAccess/files/Ex_12_Decl_Anselmi.pdf
-1171-Rootkit Analysis Identification Elimination: https://acronyms.thefreedictionary.com/Rootkit+Analysis+Identification+Elimination
-1172-TDL3: The Rootkit of All Evil?: static1.esetstatic.com/us/resources/white-papers/TDL3-Analysis.pdf
-1173-Avatar Rootkit: Dropper Analysis: https://resources.infosecinstitute.com/avatar-rootkit-dropper-analysis-part-1/
-1174-Sality rootkit analysis: https://www.prodefence.org/sality-rootkit-analysis/
-1175-RootKit Hook Analyzer: https://www.resplendence.com/hookanalyzer/
-1176-Behavioral Analysis of Rootkit Malware: https://isc.sans.edu/forums/diary/Behavioral+Analysis+of+Rootkit+Malware/1487/
-1177-Malware Memory Analysis of the IVYL Linux Rootkit: https://apps.dtic.mil/docs/citations/AD1004349
-1178-Analysis of the KNARK rootkit : https://linuxsecurity.com/news/intrusion-detection/analysis-of-the-knark-rootkit
-1179-32 Bit Windows Kernel Mode Rootkit Lab Setup with INetSim : https://medium.com/@eaugusto/32-bit-windows-kernel-mode-rootkit-lab-setup-with-inetsim-e49c22e9fcd1
-1180-Ten Process Injection Techniques: A Technical Survey of Common and Trending Process Injection Techniques: https://www.endgame.com/blog/technical-blog/ten-process-injection-techniques-technical-survey-common-and-trending-process
-1181-Code & Process Injection - Red Teaming Experiments: https://ired.team/offensive-security/code-injection-process-injection
-1182-What Malware Authors Don't want you to know: https://www.blackhat.com/.../asia-17-KA-What-Malware-Authors-Don't-Want-You-To-Know
-1183-.NET Process Injection: https://medium.com/@malcomvetter/net-process-injection-1a1af00359bc
-1184-Memory Injection like a Boss : https://www.countercept.com/blog/memory-injection-like-a-boss/
-1185-Process injection - Malware style: https://www.slideshare.net/demeester1/process-injection
-1186-Userland API Monitoring and Code Injection Detection: https://0x00sec.org/t/userland-api-monitoring-and-code-injection-detection/5565
-1187-Unpacking Redaman Malware & Basics of Self-Injection Packers: https://liveoverflow.com/unpacking-buhtrap-malware-basics-of-self-injection-packers-ft-oalabs-2/
-1188-Code injection on macOS: https://knight.sc/malware/2019/03/15/code-injection-on-macos.html
-1189-(Shell)Code Injection In Linux Userland : https://blog.sektor7.net/#!res/2018/pure-in-memory-linux.md
-1190-Code injection on Windows using Python: https://www.andreafortuna.org/2018/08/06/code-injection-on-windows-using-python-a-simple-example/
-1191-What is Reflective DLL Injection and how can be detected?: https://www.andreafortuna.org/cybersecurity/what-is-reflective-dll-injection-and-how-can-be-detected/
-1192-Windows Process Injection: https://modexp.wordpress.com/2018/08/23/process-injection-propagate/
-1193-A+ cheat sheet: https://www.slideshare.net/abnmi/a-cheat-sheet
-1194-A Bettercap Tutorial — From Installation to Mischief: https://danielmiessler.com/study/bettercap/
-1195-Debugging Malware with WinDbg: https://www.ixiacom.com/company/blog/debugging-malware-windbg
-1195-Malware analysis, my own list of tools and resources: https://www.andreafortuna.org/2016/08/05/malware-analysis-my-own-list-of-tools-and-resources/
-1196-Getting Started with Reverse Engineering: https://lospi.net/developing/software/.../assembly/2015/03/.../reversing-with-ida.html
-1197-Debugging malicious windows scriptlets with Google chrome: https://medium.com/@0xamit/debugging-malicious-windows-scriptlets-with-google-chrome-c31ba409975c
-1198-Intro to Radare2 for Malware Analysis: https://malwology.com/2018/11/30/intro-to-radare2-for-malware-analysis/
-1199-Intro to Malware Analysis and Reverse Engineering: https://www.cybrary.it/course/malware-analysis/
-1200-Common Malware Persistence Mechanisms: https://resources.infosecinstitute.com/common-malware-persistence-mechanisms/
-1201-Finding Registry Malware Persistence with RECmd: https://digital-forensics.sans.org/blog/2019/05/07/malware-persistence-recmd
-1202-Windows Malware Persistence Mechanisms : https://www.swordshield.com/blog/windows-malware-persistence-mechanisms/
-1203- persistence techniques: https://www.andreafortuna.org/2017/07/06/malware-persistence-techniques/
-1204- Persistence Mechanism - an overview | ScienceDirect Topics: https://www.sciencedirect.com/topics/computer-science/persistence-mechanism
-1205-Malware analysis for Linux: https://www.sothis.tech/en/malware-analysis-for-linux-wirenet/
-1206-Linux Malware Persistence with Cron: https://www.sandflysecurity.com/blog/linux-malware-persistence-with-cron/
-1207-What is advanced persistent threat (APT)? : https://searchsecurity.techtarget.com/definition/advanced-persistent-threat-APT
-1208-Malware Analysis, Part 1: Understanding Code Obfuscation : https://www.vadesecure.com/en/malware-analysis-understanding-code-obfuscation-techniques/
-1209-Top 6 Advanced Obfuscation Techniques: https://sensorstechforum.com/advanced-obfuscation-techniques-malware/
-1210-Malware Obfuscation Techniques: https://dl.acm.org/citation.cfm?id=1908903
-1211-How Hackers Hide Their Malware: Advanced Obfuscation: https://www.darkreading.com/attacks-breaches/how-hackers-hide-their-malware-advanced-obfuscation/a/d-id/1329723
-1212-Malware obfuscation techniques: four simple examples: https://www.andreafortuna.org/2016/10/13/malware-obfuscation-techniques-four-simple-examples/
-1213-Malware Monday: Obfuscation: https://medium.com/@bromiley/malware-monday-obfuscation-f65239146db0
-1213-Challenge of Malware Analysis: Malware obfuscation Techniques: https://www.ijiss.org/ijiss/index.php/ijiss/article/view/327
-1214-Static Malware Analysis - Infosec Resources: https://resources.infosecinstitute.com/malware-analysis-basics-static-analysis/
-1215-Malware Basic Static Analysis: https://medium.com/@jain.sm/malware-basic-static-analysis-cf19b4600725
-1216-Difference Between Static Malware Analysis and Dynamic Malware Analysis: http://www.differencebetween.net/technology/difference-between-static-malware-analysis-and-dynamic-malware-analysis/
-1217-What is Malware Analysis | Different Tools for Malware Analysis: https://blog.comodo.com/different-techniques-for-malware-analysis/
-1218-Detecting Malware Pre-execution with Static Analysis and Machine Learning: https://www.sentinelone.com/blog/detecting-malware-pre-execution-static-analysis-machine-learning/
-1219-Limits of Static Analysis for Malware Detection: https://ieeexplore.ieee.org/document/4413008
-1220-Kernel mode versus user mode: https://blog.codinghorror.com/understanding-user-and-kernel-mode/
-1221-Understanding the ELF: https://medium.com/@MrJamesFisher/understanding-the-elf-4bd60daac571
-1222-Windows Privilege Abuse: Auditing, Detection, and Defense: https://medium.com/palantir/windows-privilege-abuse-auditing-detection-and-defense-3078a403d74e
-1223-First steps to volatile memory analysis: https://medium.com/@zemelusa/first-steps-to-volatile-memory-analysis-dcbd4d2d56a1
-1224-Maliciously Mobile: A Brief History of Mobile Malware: https://medium.com/threat-intel/mobile-malware-infosec-history-70f3fcaa61c8
-1225-Modern Binary Exploitation Writeups 0x01: https://medium.com/bugbountywriteup/binary-exploitation-5fe810db3ed4
-1226-Exploit Development 01 — Terminology: https://medium.com/@MKahsari/exploit-development-01-terminology-db8c19db80d5
-1227-Zero-day exploits: A cheat sheet for professionals: https://www.techrepublic.com/article/zero-day-exploits-the-smart-persons-guide/
-1228-Best google hacking list on the net: https://pastebin.com/x5LVJu9T
-1229-Google Hacking: https://pastebin.com/6nsVK5Xi
-1230-OSCP links: https://pastebin.com/AiYV80uQ
-1231-Pentesting 1 Information gathering: https://pastebin.com/qLitw9eT
-1232-OSCP-Survival-Guide: https://pastebin.com/kdc6th08
-1233-Googledork: https://pastebin.com/qKwU37BK
-1234-Exploit DB: https://pastebin.com/De4DNNKK
-1235-Dorks: https://pastebin.com/cfVcqknA
-1236-GOOGLE HACKİNG DATABASE: https://pastebin.com/1ndqG7aq
-1237-Carding Dorks 2019: https://pastebin.com/Hqsxu6Nn
-1238-17k Carding Dorks 2019: https://pastebin.com/fgdZxy74
-1239-CARDING DORKS 2019: https://pastebin.com/Y7KvzZqg
-1240-sqli dork 2019: https://pastebin.com/8gdeLYvU
-1241-Private Carding Dorks 2018: https://pastebin.com/F0KxkMMD
-1242-20K dorks list fresh full carding 2018: https://pastebin.com/LgCh0NRJ
-1243-8k Carding Dorks :): https://pastebin.com/2bjBPiEm
-1244-8500 SQL DORKS: https://pastebin.com/yeREBFzp
-1245-REAL CARDING DORKS: https://pastebin.com/0kMhA0Gb
-1246-15k btc dorks: https://pastebin.com/zbbBXSfG
-1247-Sqli dorks 2016-2017: https://pastebin.com/7TQiMj3A
-1248-Here is kind of a tutorial on how to write google dorks.: https://pastebin.com/hZCXrAFK
-1249-10k Private Fortnite Dorks: https://pastebin.com/SF9UmG1Y
-1250-find login panel dorks: https://pastebin.com/9FGUPqZc
-1251-Shell dorks: https://pastebin.com/iZBFQ5yp
-1252-HQ PAID GAMING DORKS: https://pastebin.com/vNYnyW09
-1253-10K HQ Shopping DORKS: https://pastebin.com/HTP6rAt4
-1254-Exploit Dorks for Joomla,FCK and others 2015 Old but gold: https://pastebin.com/ttxAJbdW
-1255-Gain access to unsecured IP cameras with these Google dorks: https://pastebin.com/93aPbwwE
-1256-new fresh dorks: https://pastebin.com/ZjdxBbNB
-1257-SQL DORKS FOR CC: https://pastebin.com/ZQTHwk2S
-1258-Wordpress uploadify Dorks Priv8: https://pastebin.com/XAGmHVUr
-1259-650 DORKS CC: https://pastebin.com/xZHARTyz
-1260-3k Dorks Shopping: https://pastebin.com/e1XiNa8M
-1261-DORKS 2018 : https://pastebin.com/YAZkPJ0j
-1262-HQ FORTNITE DORKS LIST: https://pastebin.com/rzhiNad8
-1263-HQ PAID DORKS MIXED GAMING LOL STEAM ..MUSIC SHOPING: https://pastebin.com/VwVpAvj2
-1264-Camera dorks: https://pastebin.com/fsARft2j
-1265-Admin Login Dorks: https://pastebin.com/HWWNZCph
-1266-sql gov dorks: https://pastebin.com/C8wqyNW8
-1267-10k hq gaming dorks: https://pastebin.com/cDLN8edi
-1268-HQ SQLI Google Dorks For Shops/Amazon! Enjoy! : https://pastebin.com/y59kK2h0
-1269-Dorks: https://pastebin.com/PKvZYMAa
-1270-10k btc dorks: https://pastebin.com/vRnxvbCu
-1271-7,000 Dorks for hacking into various sites: https://pastebin.com/n8JVQv3X
-1272-List of information gathering search engines/tools etc: https://pastebin.com/GTX9X5tF
-1273-FBOSINT: https://pastebin.com/5KqnFS0B
-1274-Ultimate Penetration Testing: https://pastebin.com/4EEeEnXe
-1275-massive list of information gathering search engines/tools : https://pastebin.com/GZ9TVxzh
-1276-CEH Class: https://pastebin.com/JZdCHrN4
-1277-CEH/CHFI Bundle Study Group Sessions: https://pastebin.com/XTwksPK7
-1278-OSINT - Financial: https://pastebin.com/LtxkUi0Y
-1279-Most Important Security Tools and Resources: https://pastebin.com/cGE8rG04
-1280-OSINT resources from inteltechniques.com: https://pastebin.com/Zbdz7wit
-1281-Red Team Tips: https://pastebin.com/AZDBAr1m
-1282-OSCP Notes by Ash: https://pastebin.com/wFWx3a7U
-1283-OSCP Prep: https://pastebin.com/98JG5f2v
-1284-OSCP Review/Cheat Sheet: https://pastebin.com/JMMM7t4f
-1285-OSCP Prep class: https://pastebin.com/s59GPJrr
-1286-Complete Anti-Forensics Guide: https://pastebin.com/6V6wZK0i
-1287-The Linux Command Line Cheat Sheet: https://pastebin.com/PUtWDKX5
-1288-Command-Line Log Analysis: https://pastebin.com/WEDwpcz9
-1289-An A-Z Index of the Apple macOS command line (OS X): https://pastebin.com/RmPLQA5f
-1290-San Diego Exploit Development 2018: https://pastebin.com/VfwhT8Yd
-1291-Windows Exploit Development Megaprimer: https://pastebin.com/DvdEW4Az
-1292-Some Free Reverse engineering resources: https://pastebin.com/si2ThQPP
-1293-Sans: https://pastebin.com/MKiSnjLm
-1294-Metasploit Next Level: https://pastebin.com/0jC1BUiv
-1295-Just playing around....: https://pastebin.com/gHXPzf6B
-1296-Red Team Course: https://pastebin.com/YUYSXNpG
-1297-New Exploit Development 2018: https://pastebin.com/xaRxgYqQ
-1298-Good reviews of CTP/OSCE (in no particular order):: https://pastebin.com/RSPbatip
-1299-Vulnerability Research Engineering Bookmarks Collection v1.0: https://pastebin.com/8mUhjGSU
-1300-Professional-hacker's Pastebin : https://pastebin.com/u/Professional-hacker
-1301-Google Cheat Sheet: http://www.googleguide.com/print/adv_op_ref.pdf
-1302-Shodan for penetration testers: https://www.defcon.org/images/defcon-18/dc-18-presentations/Schearer/DEFCON-18-Schearer-SHODAN.pdf
-1303-Linux networking tools: https://gist.github.com/miglen/70765e663c48ae0544da08c07006791f
-1304-DNS spoofing with NetHunter: https://cyberarms.wordpress.com/category/nethunter-tutorial/
-1305-Tips on writing a penetration testing report: https://www.sans.org/reading-room/whitepapers/bestprac/writing-penetration-testing-report-33343
-1306-Technical penetration report sample: https://tbgsecurity.com/wordpress/wp-content/uploads/2016/11/Sample-Penetration-Test-Report.pdf
-1307-Nessus sample reports: https://www.tenable.com/products/nessus/sample-reports
-1308-Sample penetration testing report: https://www.offensive-security.com/reports/sample-penetration-testing-report.pdf
-1309-jonh-the-ripper-cheat-sheet: https://countuponsecurity.com/2015/06/14/jonh-the-ripper-cheat-sheet/
-1310-ultimate guide to cracking foreign character passwords using hashcat: http://www.netmux.com/blog/ultimate-guide-to-cracking-foreign-character-passwords-using-has
-1311-Building_a_Password_Cracking_Rig_for_Hashcat_-_Part_III: https://www.unix-ninja.com/p/Building_a_Password_Cracking_Rig_for_Hashcat_-_Part_III
-1312-cracking story how i cracked over 122 million sha1 and md5 hashed passwords: http://blog.thireus.com/cracking-story-how-i-cracked-over-122-million-sha1-and-md5-hashed-passwords/
-1313-CSA (Cloud Security Alliance) Security White Papers: https://cloudsecurityalliance.org/download/
-1314-NIST Security Considerations in the System Development Life Cycle: https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-64r2.pdf
-1315-ISO 29100 information technology security techniques privacy framework: https://www.iso.org/standard/45123.html
-1316-NIST National Checklist Program: https://nvd.nist.gov/ncp/repository
-1317-OWASP Guide to Cryptography: https://www.owasp.org/index.php/Guide_to_Cryptography
-1318-NVD (National Vulnerability Database): https://nvd.nist.gov/
-1319-CVE details: https://cvedetails.com/
-1320-CIS Cybersecurity Tools: https://www.cisecurity.org/cybersecurity-tools/
-1321-Security aspects of virtualization by ENISA: https://www.enisa.europa.eu/publications/security-aspects-of-virtualization/
-1322-CIS Benchmarks also provides a security guide for VMware, Docker, and Kubernetes: https://www.cisecurity.org/cis-benchmarks/
-1323-OpenStack's hardening of the virtualization layer provides a secure guide to building the virtualization layer: https://docs.openstack.org/security-guide/compute/hardening-the-virtualization-layers.html
-1324-Docker security: https://docs.docker.com/engine/security/security/
-1325-Microsoft Security Development Lifecycle: http://www.microsoft.com/en-us/SDL/
-1326-OWASP SAMM Project: https://www.owasp.org/index.php/OWASP_SAMM_Project
-1327-CWE/SANS Top 25 Most Dangerous Software Errors: https://cwe.mitre.org/top25/
-1329-OWASP Vulnerable Web Applications Directory Project: https://www.owasp.org/index.php/OWASP_Vulnerable_Web_Applications_Directory_Project
-1330-CERT Secure Coding Standards: https://wiki.sei.cmu.edu/confluence/display/seccode/SEI+CERT+Coding+Standards
-1331-NIST Special Publication 800-53: https://nvd.nist.gov/800-53
-1332-SAFECode Security White Papers: https://safecode.org/publications/
-1333-Microsoft Threat Modeling tool 2016: https://aka.ms/tmt2016/
-1334-Apache Metron for real-time big data security: http://metron.apache.org/documentation/
-1335-Introducing OCTAVE Allegro: Improving the Information Security Risk Assessment Process: https://resources.sei.cmu.edu/asset_files/TechnicalReport/2007_005_001_14885.pdf
-1336-NIST 800-18 Guide for Developing Security Plans for Federal Information Systems: http://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-18r1.pdf
-1337-ITU-T X.805 (10/2003) Security architecture for systems providing end- to-end communications: https://www.itu.int/rec/dologin_pub.asp?lang=e&id=T-REC-X.805-200310-I!!PDF-E&type=items
-1338-ETSI TS 102 165-1 V4.2.1 (2006-12) : Method and proforma for Threat, Risk, Vulnerability Analysis: http://www.etsi.org/deliver/etsi_ts/102100_102199/10216501/04.02.01_60/ts_10216501v040201p.pdf
-1339-SAFECode Fundamental Practices for Secure Software Development: https://safecode.org/wp-content/uploads/2018/03/SAFECode_Fundamental_Practices_for_Secure_Software_Development_March_2018.pdf
-1340-NIST 800-64 Security Considerations in the System Development Life Cycle: https://csrc.nist.gov/publications/detail/sp/800-64/rev-2/final
-1341-SANS A Security Checklist for Web Application Design: https://www.sans.org/reading-room/whitepapers/securecode/security-checklist-web-application-design-1389
-1342-Best Practices for implementing a Security Awareness Program: https://www.pcisecuritystandards.org/documents/PCI_DSS_V1.0_Best_Practices_for_Implementing_Security_Awareness_Program.pdf
-1343-ETSI TS 102 165-1 V4.2.1 (2006-12): Method and proforma for Threat, Risk, Vulnerability Analysis: http://www.etsi.org/deliver/etsi_ts/102100_102199/10216501/04.02.03_60/ts_10216501v040203p.pdf
-1344-NIST 800-18 Guide for Developing Security Plans for Federal Information Systems: https://csrc.nist.gov/publications/detail/sp/800-18/rev-1/final
-1345-SafeCode Tactical Threat Modeling: https://safecode.org/safecodepublications/tactical-threat-modeling/
-1346-SANS Web Application Security Design Checklist: https://www.sans.org/reading-room/whitepapers/securecode/security-checklist-web-application-design-1389
-1347-Data Anonymization for production data dumps: https://github.com/sunitparekh/data-anonymization
-1348-SANS Continuous Monitoring—What It Is, Why It Is Needed, and How to Use It: https://www.sans.org/reading-room/whitepapers/analyst/continuous-monitoring-is-needed-35030
-1349-Guide to Computer Security Log Management: https://ws680.nist.gov/publication/get_pdf.cfm?pub_id=50881
-1350-Malware Indicators: https://github.com/citizenlab/malware-indicators
-1351-OSINT Threat Feeds: https://www.circl.lu/doc/misp/feed-osint/
-1352-SANS How to Use Threat Intelligence effectively: https://www.sans.org/reading-room/whitepapers/analyst/threat-intelligence-is-effectively-37282
-1353-NIST 800-150 Guide to Cyber Threat Information Sharing: https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-150.pdf
-1354-Securing Web Application Technologies Checklist: https://software-security.sans.org/resources/swat
-1355-Firmware Security Training: https://github.com/advanced-threat-research/firmware-security-training
-1356-Burp Suite Bootcamp: https://pastebin.com/5sG7Rpg5
-1357-Web app hacking: https://pastebin.com/ANsw7WRx
-1358-XSS Payload: https://pastebin.com/EdxzE4P1
-1359-XSS Filter Evasion Cheat Sheet: https://pastebin.com/bUutGfSy
-1360-Persistence using RunOnceEx – Hidden from Autoruns.exe: https://oddvar.moe/2018/03/21/persistence-using-runonceex-hidden-from-autoruns-exe/
-1361-Windows Operating System Archaeology: https://www.slideshare.net/enigma0x3/windows-operating-system-archaeology
-1362-How to Backdoor Windows 10 Using an Android Phone & USB Rubber Ducky: https://www.prodefence.org/how-to-backdoor-windows-10-using-an-android-phone-usb-rubber-ducky/
-1363-Malware Analysis using Osquery : https://hackernoon.com/malware-analysis-using-osquery-part-2-69f08ec2ecec
-1364-Tales of a Blue Teamer: Detecting Powershell Empire shenanigans with Sysinternals : https://holdmybeersecurity.com/2019/02/27/sysinternals-for-windows-incident-response/
-1365-Userland registry hijacking: https://3gstudent.github.io/Userland-registry-hijacking/
-1366-Malware Hiding Techniques to Watch for: AlienVault Labs: https://www.alienvault.com/blogs/labs-research/malware-hiding-techniques-to-watch-for-alienvault-labs
-1367- Full text of "Google hacking for penetration testers" : https://archive.org/stream/pdfy-TPtNL6_ERVnbod0r/Google+Hacking+-+For+Penetration+Tester_djvu.txt
-1368- Full text of "Long, Johnny Google Hacking For Penetration Testers" : https://archive.org/stream/LongJohnnyGoogleHackingForPenetrationTesters/Long%2C%20Johnny%20-%20Google%20Hacking%20for%20Penetration%20Testers_djvu.txt
-1369- Full text of "Coding For Penetration Testers" : https://archive.org/stream/CodingForPenetrationTesters/Coding%20for%20Penetration%20Testers_djvu.txt
-1370- Full text of "Hacking For Dummies" : https://archive.org/stream/HackingForDummies/Hacking%20For%20Dummies_djvu.txt
-1371-Full text of "Wiley. Hacking. 5th. Edition. Jan. 2016. ISBN. 1119154685. Profescience.blogspot.com" : https://archive.org/stream/Wiley.Hacking.5th.Edition.Jan.2016.ISBN.1119154685.Profescience.blogspot.com/Wiley.Hacking.5th.Edition.Jan.2016.ISBN.1119154685.Profescience.blogspot.com_djvu.txt
-1372- Full text of "Social Engineering The Art Of Human Hacking" : https://archive.org/stream/SocialEngineeringTheArtOfHumanHacking/Social%20Engineering%20-%20The%20Art%20of%20Human%20Hacking_djvu.txt
-1373- Full text of "CYBER WARFARE" : https://archive.org/stream/CYBERWARFARE/CYBER%20WARFARE_djvu.txt
-1374-Full text of "NSA DOCID: 4046925 Untangling The Web: A Guide To Internet Research" : https://archive.org/stream/Untangling_the_Web/Untangling_the_Web_djvu.txt
-1375- Full text of "sectools" : https://archive.org/stream/sectools/hack-the-stack-network-security_djvu.txt
-1376- Full text of "Aggressive network self-defense" : https://archive.org/stream/pdfy-YNtvDJueGZb1DCDA/Aggressive%20Network%20Self-Defense_djvu.txt
-1377-Community Texts: https://archive.org/details/opensource?and%5B%5D=%28language%3Aeng+OR+language%3A%22English%22%29+AND+subject%3A%22google%22
-1378- Full text of "Cyber Spying - Tracking (sometimes).PDF (PDFy mirror)" : https://archive.org/stream/pdfy-5-Ln_yPZ22ondBJ8/Cyber%20Spying%20-%20Tracking%20%28sometimes%29_djvu.txt
-1379- Full text of "Enzyclopedia Of Cybercrime" : https://archive.org/stream/EnzyclopediaOfCybercrime/Enzyclopedia%20Of%20Cybercrime_djvu.txt
-1380- Full text of "Information Security Management Handbook" : https://archive.org/stream/InformationSecurityManagementHandbook/Information%20Security%20Management%20Handbook_djvu.txt
-1381- Full text of "ARMArchitecture Reference Manual" : https://archive.org/stream/ARMArchitectureReferenceManual/DetectionOfIntrusionsAndMalwareAndVulnerabilityAssessment2016_djvu.txt
-1382- Full text of "Metasploit The Penetration Tester S Guide" : https://archive.org/stream/MetasploitThePenetrationTesterSGuide/Metasploit-The+Penetration+Tester+s+Guide_djvu.txt
-1383-Tips & tricks to master Google’s search engine: https://medium.com/infosec-adventures/google-hacking-39599373be7d
-1384-Ethical Google Hacking - Sensitive Doc Dork (Part 2) : https://securing-the-stack.teachable.com/courses/ethical-google-hacking-1/lectures/3877866
-1385- Google Hacking Secrets:the Hidden Codes of Google : https://www.ma-no.org/en/security/google-hacking-secrets-the-hidden-codes-of-google
-1386-google hacking: https://www.slideshare.net/SamNizam/3-google-hacking
-1387-How Penetration Testers Use Google Hacking: https://www.cqure.nl/kennisplatform/how-penetration-testers-use-google-hacking
-1388-Free Automated Malware Analysis Sandboxes and Services: https://zeltser.com/automated-malware-analysis/
-1389-How to get started with Malware Analysis and Reverse Engineering: https://0ffset.net/miscellaneous/how-to-get-started-with-malware-analysis/
-1390-Handy Tools And Websites For Malware Analysis: https://www.informationsecuritybuzz.com/articles/handy-tools-and-websites/
-1391-Dynamic Malware Analysis: https://prasannamundas.com/share/dynamic-malware-analysis/
-1392-Intro to Radare2 for Malware Analysis: https://malwology.com/2018/11/30/intro-to-radare2-for-malware-analysis/
-1393-Detecting malware through static and dynamic techniques: https://technical.nttsecurity.com/.../detecting-malware-through-static-and-dynamic-tec...
-1394-Malware Analysis Tutorial : Tricks for Confusing Static Analysis Tools: https://www.prodefence.org/malware-analysis-tutorial-tricks-confusing-static-analysis-tools
-1395-Malware Analysis Lab At Home In 5 Steps: https://ethicalhackingguru.com/malware-analysis-lab-at-home-in-5-steps/
-1396-Malware Forensics Guide - Static and Dynamic Approach: https://www.yeahhub.com/malware-forensics-guide-static-dynamic-approach/
-1397-Top 30 Bug Bounty Programs in 2019: https://www.guru99.com/bug-bounty-programs.html
-1398-Introduction - Book of BugBounty Tips: https://gowsundar.gitbook.io/book-of-bugbounty-tips/
-1399-List of bug bounty writeups: https://pentester.land/list-of-bug-bounty-writeups.html
-1400-Tips From A Bugbounty Hunter: https://www.secjuice.com/bugbounty-hunter/
-1401-Cross Site Scripting (XSS) - Book of BugBounty Tips: https://gowsundar.gitbook.io/book-of
+474-SSH Pivoting using Meterpreter:
+`;
+
+// Function to extract domain from a URL
+const getDomain = (url: string): string => {
+  try {
+    let fullUrl = url.trim();
+    if (!fullUrl.startsWith('http')) {
+      fullUrl = `https://${fullUrl}`;
+    }
+    const domain = new URL(fullUrl).hostname;
+    return domain.replace(/^www\./, '');
+  } catch (error) {
+    // Fallback for malformed URLs that might not have a protocol but are domain/path
+    const parts = url.split('/');
+    if (parts.length > 0 && parts[0].includes('.')) {
+      return parts[0].replace(/^www\./, '');
+    }
+    console.error(`Could not parse domain from URL: ${url}`, error);
+    return 'unknown domain';
+  }
+};
+
+// Function to assign category based on keywords in the title
+const getCategory = (title: string): string => {
+  const lowerTitle = title.toLowerCase();
+
+  const categoryKeywords: { [key: string]: string[] } = {
+    'Recon & OSINT': ['recon', 'osint', 'enumeration', 'dork', 'footprinting', 'sub-domain', 'subdomain', 'information gathering'],
+    'Exploitation & Pentesting': ['exploit', 'pentest', 'pentesting', 'penetration testing', 'vulnerability', 'injection', 'cve', 'rce', 'lfi', 'metasploit', 'privilege escalation'],
+    'Web Security (WebSec)': ['xss', 'csrf', 'sql injection', 'ssrf', 'websec', 'web application', 'waf', 'burp', 'open redirection'],
+    'Red Teaming & C2': ['red team', 'red-team', 'c2', 'command and control', 'cobalt strike', 'empire', 'pivoting', 'lateral movement', 'c&c'],
+    'Windows Security': ['windows', 'active directory', 'powershell', 'uac', 'dll', 'ntds', 'regsvr32', 'applocker', 'wmic', 'wmi'],
+    'Linux Security': ['linux', 'unix', 'selinux', 'kernel', 'sudo', 'cronjob'],
+    'Malware Analysis & RE': ['malware', 'reverse engineering', 'reversing', 'shellcode', 'obfuscation', 'fuzzing', 'anubis', 'yara', 'backdoor'],
+    'Wireless & Network': ['wifi', 'wi-fi', 'wireless', 'wpa', 'aircrack', 'network', 'wireshark', 'nmap', 'ssh', 'dns', 'smb', 'ftp', 'vnc'],
+    'Cheatsheets & Resources': ['cheat sheet', 'cheatsheet', 'resources', 'list', 'awesome', 'guide', 'toolkit', 'wiki', 'payloads'],
+  };
+  
+  const categoriesToCheck = [
+    'Recon & OSINT',
+    'Exploitation & Pentesting',
+    'Web Security (WebSec)',
+    'Red Teaming & C2',
+    'Windows Security',
+    'Linux Security',
+    'Malware Analysis & RE',
+    'Wireless & Network',
+    'Cheatsheets & Resources',
+  ];
+
+  for (const category of categoriesToCheck) {
+    if (categoryKeywords[category]) {
+      for (const keyword of categoryKeywords[category]) {
+        if (lowerTitle.includes(keyword)) {
+          return category;
+        }
+      }
+    }
+  }
+
+  return 'Other';
+};
+
+const parseResources = (data: string): Resource[] => {
+  const lines = data.trim().split('\n');
+  const resources: Resource[] = [];
+
+  for (const line of lines) {
+    const trimmedLine = line.trim();
+    if (!trimmedLine) continue;
+    
+    const match = trimmedLine.match(/^(\d+)-/);
+    if (!match) {
+        console.warn(`Line does not start with a number-hyphen pattern: "${trimmedLine}"`);
+        continue;
+    }
+    
+    const id = parseInt(match[1], 10);
+    const content = trimmedLine.substring(match[0].length).trim();
+    
+    const lastColonIndex = content.lastIndexOf(':');
+    
+    // Ensure the colon is not part of a protocol like 'http:' and there's content after it
+    if (lastColonIndex === -1 || content.substring(lastColonIndex + 1).trim().length < 5 || content.substring(lastColonIndex-4, lastColonIndex) === 'http') {
+        console.warn(`Could not reliably split title and URL: "${trimmedLine}"`);
+        continue;
+    }
+
+    let title = content.substring(0, lastColonIndex).trim();
+    let url = content.substring(lastColonIndex + 1).trim();
+
+    // Clean up title if it starts with a colon from malformed entries
+    if (title.startsWith(':')) {
+      title = title.substring(1).trim();
+    }
+
+    const fullUrl = url.startsWith('http') || url.startsWith('//') ? url : `https://${url}`;
+
+    const resource: Resource = {
+      id,
+      title,
+      url: fullUrl,
+      domain: getDomain(url),
+      category: getCategory(title),
+    };
+    resources.push(resource);
+  }
+
+  return resources;
+};
+
+const allResources: Resource[] = parseResources(rawData);
+
+export default allResources;
