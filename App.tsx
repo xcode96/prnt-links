@@ -1,4 +1,5 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useCallback } from 'react';
+import { GoogleGenAI } from "@google/genai";
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import LinkCard from './components/LinkCard';
@@ -9,10 +10,14 @@ import { Resource } from './types';
 
 const ITEMS_PER_PAGE = 24;
 
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+
 const App: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
+  const [descriptions, setDescriptions] = useState<Record<number, string>>({});
+  const [loadingDescriptions, setLoadingDescriptions] = useState<Record<number, boolean>>({});
 
   const filteredResources = useMemo(() => {
     // Normalize search query for case-insensitive and whitespace-agnostic matching.
@@ -43,6 +48,39 @@ const App: React.FC = () => {
     return filteredResources.slice(startIndex, startIndex + ITEMS_PER_PAGE);
   }, [currentPage, filteredResources]);
 
+  const generateDescription = useCallback(async (resource: Resource) => {
+    if (descriptions[resource.id] || loadingDescriptions[resource.id]) {
+      return;
+    }
+
+    try {
+      setLoadingDescriptions(prev => ({ ...prev, [resource.id]: true }));
+
+      const prompt = `Provide a concise, one-sentence description for the following cybersecurity resource titled "${resource.title}".`;
+      
+      const response = await ai.models.generateContent({
+        model: 'gemini-2.5-flash',
+        contents: prompt,
+      });
+
+      const descriptionText = response.text.trim();
+      
+      if (descriptionText) {
+        setDescriptions(prev => ({ ...prev, [resource.id]: descriptionText }));
+      }
+    } catch (error) {
+      console.error(`Failed to generate description for "${resource.title}":`, error);
+      setDescriptions(prev => ({ ...prev, [resource.id]: 'Could not generate a description for this resource.' }));
+    } finally {
+      setLoadingDescriptions(prev => ({ ...prev, [resource.id]: false }));
+    }
+  }, [descriptions, loadingDescriptions]);
+
+  useEffect(() => {
+    for (const resource of paginatedResources) {
+      generateDescription(resource);
+    }
+  }, [paginatedResources, generateDescription]);
 
   return (
     <div className="bg-gray-900 text-gray-200 min-h-screen font-sans">
@@ -59,9 +97,14 @@ const App: React.FC = () => {
         <main className="py-8">
           {paginatedResources.length > 0 ? (
             <>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {paginatedResources.map((resource) => (
-                  <LinkCard key={resource.id + resource.title} resource={resource} />
+                  <LinkCard 
+                    key={resource.id} 
+                    resource={resource} 
+                    description={descriptions[resource.id]}
+                    isLoadingDescription={loadingDescriptions[resource.id]}
+                  />
                 ))}
               </div>
               <Pagination

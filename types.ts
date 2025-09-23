@@ -5,4 +5,5 @@ export interface Resource {
   url: string;
   category: string;
   domain: string;
+  description?: string;
 }
