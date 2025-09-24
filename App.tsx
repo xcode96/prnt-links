@@ -24,7 +24,8 @@ const App: React.FC = () => {
   const [ai, setAi] = useState<GoogleGenAI | null>(null);
 
   // Core State
-  const [resources, setResources] = useState<Resource[]>(allResources);
+  const [resources, setResources] = useState<Resource[]>([]);
+  const [userAddedResources, setUserAddedResources] = useState<Resource[]>([]);
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
@@ -47,6 +48,20 @@ const App: React.FC = () => {
     if (params.get('code') === 'dq.adm') {
       setIsAdmin(true);
       setCurrentView('admin');
+    }
+  }, []);
+
+  // Initial resource loading from static file and localStorage
+  useEffect(() => {
+    try {
+      const userResourcesFromStorage = JSON.parse(localStorage.getItem('user-resources') || '[]') as Resource[];
+      setUserAddedResources(userResourcesFromStorage);
+      const combined = [...userResourcesFromStorage, ...allResources];
+      const uniqueResources = Array.from(new Map(combined.map(item => [item.id, item])).values());
+      setResources(uniqueResources);
+    } catch (error) {
+        console.error("Error loading resources from local storage:", error);
+        setResources(allResources);
     }
   }, []);
 
@@ -171,7 +186,13 @@ const App: React.FC = () => {
 
   // New resource handler
   const handleAddResource = (newResource: Resource) => {
-    setResources(prevResources => [newResource, ...prevResources]);
+    // Add to the live resources state for immediate UI update
+    setResources(prev => [newResource, ...prev]);
+
+    // Update the dedicated list of user-added resources and persist to localStorage
+    const newAddedList = [newResource, ...userAddedResources];
+    setUserAddedResources(newAddedList);
+    localStorage.setItem('user-resources', JSON.stringify(newAddedList));
   };
 
   return (
@@ -231,7 +252,11 @@ const App: React.FC = () => {
         )}
 
         {currentView === 'admin' && isAdmin && (
-            <Admin resources={resources} onAddResource={handleAddResource} />
+            <Admin 
+                resources={resources} 
+                onAddResource={handleAddResource} 
+                userAddedResources={userAddedResources}
+            />
         )}
       </div>
       
