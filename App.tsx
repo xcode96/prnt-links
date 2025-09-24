@@ -6,6 +6,7 @@ import Sidebar from './components/Sidebar';
 import LinkCard from './components/LinkCard';
 import Pagination from './components/Pagination';
 import Dashboard from './components/Dashboard';
+import Admin from './components/Admin';
 import Modal from './components/Modal';
 import SubmissionForm from './components/SubmissionForm';
 import ChatAssistant from './components/ChatAssistant';
@@ -23,6 +24,7 @@ const App: React.FC = () => {
   const [ai, setAi] = useState<GoogleGenAI | null>(null);
 
   // Core State
+  const [resources, setResources] = useState<Resource[]>(allResources);
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
@@ -30,7 +32,8 @@ const App: React.FC = () => {
   
   // UI State
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
-  const [currentView, setCurrentView] = useState<'hub' | 'dashboard'>('hub');
+  const [currentView, setCurrentView] = useState<'hub' | 'dashboard' | 'admin'>('hub');
+  const [isAdmin, setIsAdmin] = useState(false);
   const [isDiscoverModalOpen, setIsDiscoverModalOpen] = useState(false);
   const [discoverResource, setDiscoverResource] = useState<Resource | null>(null);
   const [discoverDescription, setDiscoverDescription] = useState('');
@@ -38,6 +41,15 @@ const App: React.FC = () => {
   const [isSubmitModalOpen, setIsSubmitModalOpen] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
   
+  // Admin Mode Check
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('code') === 'dq.adm') {
+      setIsAdmin(true);
+      setCurrentView('admin');
+    }
+  }, []);
+
   // AI Initialization
   useEffect(() => {
     if (process.env.API_KEY) {
@@ -85,22 +97,22 @@ const App: React.FC = () => {
   const filteredResources = useMemo(() => {
     const normalizedQuery = searchQuery.trim().toLowerCase();
     
-    let resources;
+    let sourceResources;
     if (selectedCategory === 'All') {
-      resources = allResources;
+      sourceResources = resources;
     } else if (selectedCategory === 'Saved') {
-      resources = allResources.filter(r => savedItems.includes(r.id));
+      sourceResources = resources.filter(r => savedItems.includes(r.id));
     } else {
-      resources = allResources.filter(r => r.category === selectedCategory);
+      sourceResources = resources.filter(r => r.category === selectedCategory);
     }
 
-    if (!normalizedQuery) return resources;
+    if (!normalizedQuery) return sourceResources;
 
-    return resources.filter(r => 
+    return sourceResources.filter(r => 
       r.title.toLowerCase().includes(normalizedQuery) ||
       r.domain.toLowerCase().includes(normalizedQuery)
     );
-  }, [selectedCategory, searchQuery, savedItems]);
+  }, [selectedCategory, searchQuery, savedItems, resources]);
 
   useEffect(() => {
     setCurrentPage(1);
@@ -117,8 +129,8 @@ const App: React.FC = () => {
   const handleDiscover = useCallback(async () => {
     if (!ai) return;
 
-    const randomIndex = Math.floor(Math.random() * allResources.length);
-    const resource = allResources[randomIndex];
+    const randomIndex = Math.floor(Math.random() * resources.length);
+    const resource = resources[randomIndex];
     setDiscoverResource(resource);
     setIsDiscoverModalOpen(true);
     setIsLoadingDescription(true);
@@ -137,7 +149,7 @@ const App: React.FC = () => {
     } finally {
       setIsLoadingDescription(false);
     }
-  }, [ai]);
+  }, [ai, resources]);
 
   // Chat Feature
   const handleSendMessage = useCallback(async (message: string) => {
@@ -157,6 +169,10 @@ const App: React.FC = () => {
     }
   }, [ai]);
 
+  // New resource handler
+  const handleAddResource = (newResource: Resource) => {
+    setResources(prevResources => [newResource, ...prevResources]);
+  };
 
   return (
     <div className="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 min-h-screen font-sans transition-colors duration-300">
@@ -166,16 +182,17 @@ const App: React.FC = () => {
             toggleTheme={toggleTheme} 
             currentView={currentView}
             setCurrentView={setCurrentView}
+            isAdmin={isAdmin}
         />
         
-        {currentView === 'hub' ? (
+        {currentView === 'hub' && (
             <>
                 <Sidebar
                     selectedCategory={selectedCategory}
                     onSelectCategory={setSelectedCategory}
                     searchQuery={searchQuery}
                     onSearchChange={setSearchQuery}
-                    totalCount={allResources.length}
+                    totalCount={resources.length}
                     filteredCount={filteredResources.length}
                     onDiscover={handleDiscover}
                     onSubmit={() => setIsSubmitModalOpen(true)}
@@ -207,8 +224,14 @@ const App: React.FC = () => {
                     )}
                 </main>
             </>
-        ) : (
-            <Dashboard resources={allResources} />
+        )}
+        
+        {currentView === 'dashboard' && (
+             <Dashboard resources={resources} />
+        )}
+
+        {currentView === 'admin' && isAdmin && (
+            <Admin resources={resources} onAddResource={handleAddResource} />
         )}
       </div>
       

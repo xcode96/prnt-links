@@ -1,14 +1,15 @@
 import React from 'react';
-import { SunIcon, MoonIcon, LogoIcon, DashboardIcon, ListIcon } from './icons';
+import { SunIcon, MoonIcon, LogoIcon, DashboardIcon, ListIcon, SettingsIcon } from './icons';
 
 interface HeaderProps {
   theme: 'light' | 'dark';
   toggleTheme: () => void;
-  currentView: 'hub' | 'dashboard';
-  setCurrentView: (view: 'hub' | 'dashboard') => void;
+  currentView: 'hub' | 'dashboard' | 'admin';
+  setCurrentView: (view: 'hub' | 'dashboard' | 'admin') => void;
+  isAdmin: boolean;
 }
 
-const Header: React.FC<HeaderProps> = ({ theme, toggleTheme, currentView, setCurrentView }) => {
+const Header: React.FC<HeaderProps> = ({ theme, toggleTheme, currentView, setCurrentView, isAdmin }) => {
   return (
     <header className="py-4">
       <div className="flex justify-between items-center">
@@ -36,6 +37,17 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme, currentView, setCur
                     <DashboardIcon className="w-5 h-5"/>
                     <span>Dashboard</span>
                 </button>
+                {isAdmin && (
+                  <button
+                      onClick={() => setCurrentView('admin')}
+                      className={`flex items-center space-x-2 px-3 py-1 rounded-md text-sm font-semibold transition-colors ${
+                          currentView === 'admin' ? 'bg-white dark:bg-slate-950 shadow-sm text-cyan-600 dark:text-cyan-400' : 'text-slate-600 dark:text-slate-300 hover:bg-slate-300/50 dark:hover:bg-slate-700/50'
+                      }`}
+                  >
+                      <SettingsIcon className="w-5 h-5"/>
+                      <span>Admin</span>
+                  </button>
+                )}
            </div>
         </div>
         

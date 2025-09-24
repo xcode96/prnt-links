@@ -28,7 +28,7 @@ const SubmissionForm: React.FC<SubmissionFormProps> = ({ isOpen, onClose, ai, ca
     setIsAnalyzed(false);
 
     try {
-      const prompt = `Analyze the content at the URL: ${url}. Based on the content, suggest a concise title, a one-sentence description, and choose the most appropriate category from this list: ${categories.join(', ')}.`;
+      const prompt = `From the following URL, infer a concise title, a one-sentence description, and choose the most appropriate category from this list: ${categories.join(', ')}. URL: ${url}`;
       
       const response = await ai.models.generateContent({
         model: 'gemini-2.5-flash',
