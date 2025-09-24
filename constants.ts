@@ -1,6 +1,7 @@
 
 export const CATEGORIES = [
   'All',
+  'Saved',
   'Recon & OSINT',
   'Exploitation & Pentesting',
   'Web Security (WebSec)',

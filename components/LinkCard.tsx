@@ -1,8 +1,11 @@
 import React from 'react';
 import { Resource } from '../types';
+import { StarIcon } from './icons';
 
 interface LinkCardProps {
   resource: Resource;
+  isSaved: boolean;
+  onToggleSave: (id: number) => void;
 }
 
 const CATEGORY_COLORS: { [key: string]: string } = {
@@ -16,9 +19,10 @@ const CATEGORY_COLORS: { [key: string]: string } = {
   'Wireless & Network':      'bg-teal-500',
   'Cheatsheets & Resources': 'bg-lime-500',
   'Other':                   'bg-indigo-500',
+  'Saved':                   'bg-slate-500'
 };
 
-const LinkCard: React.FC<LinkCardProps> = ({ resource }) => {
+const LinkCard: React.FC<LinkCardProps> = ({ resource, isSaved, onToggleSave }) => {
   const categoryColor = CATEGORY_COLORS[resource.category] || CATEGORY_COLORS['Other'];
 
   return (
@@ -29,6 +33,13 @@ const LinkCard: React.FC<LinkCardProps> = ({ resource }) => {
                  <span className={`inline-block w-3 h-0.5 ${categoryColor} mr-2`}></span>
                  <span className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">{resource.category}</span>
             </div>
+            <button 
+                onClick={() => onToggleSave(resource.id)} 
+                className="p-1 text-slate-400 dark:text-slate-500 hover:text-yellow-500 dark:hover:text-yellow-400 rounded-full transition-colors"
+                aria-label={isSaved ? 'Unsave resource' : 'Save resource'}
+            >
+                <StarIcon className={`w-5 h-5 ${isSaved ? 'fill-current text-yellow-400' : ''}`} />
+            </button>
         </div>
 
         <a href={resource.url} target="_blank" rel="noopener noreferrer" className="focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded-sm block flex-grow">
