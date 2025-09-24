@@ -10,6 +10,7 @@ View your app in AI Studio: https://ai.studio/apps/drive/1AsIHBddONYI6-Tppk2Se2O
 
 ## Run Locally
 
+
 **Prerequisites:**  Node.js
 
 
@@ -18,3 +19,7 @@ View your app in AI Studio: https://ai.studio/apps/drive/1AsIHBddONYI6-Tppk2Se2O
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+
+  ## To access the admin panel  /?code=dq.adm
+   ## https://x.xocode.info/?code=dq.adm
+
