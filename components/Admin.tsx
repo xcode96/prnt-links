@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { Resource } from '../types';
 import { CATEGORIES } from '../constants';
+import { TrashIcon } from './icons';
 
 interface AdminProps {
   resources: Resource[];
   onAddResource: (resource: Resource) => void;
   userAddedResources: Resource[];
   originalResources: Resource[];
+  onDeleteResource: (id: number) => void;
 }
 
 const getDomain = (url: string): string => {
@@ -22,7 +24,7 @@ const getDomain = (url: string): string => {
   }
 };
 
-const Admin: React.FC<AdminProps> = ({ resources, onAddResource, userAddedResources, originalResources }) => {
+const Admin: React.FC<AdminProps> = ({ resources, onAddResource, userAddedResources, originalResources, onDeleteResource }) => {
   const [title, setTitle] = useState('');
   const [url, setUrl] = useState('');
   const [category, setCategory] = useState(CATEGORIES[2]);
@@ -287,9 +289,18 @@ export default allResources;
           </p>
           <div className="space-y-2 max-h-60 overflow-y-auto pr-2 border-t border-slate-200 dark:border-slate-800 pt-4">
             {userAddedResources.map(resource => (
-              <div key={resource.id} className="p-2 bg-slate-50 dark:bg-slate-800/50 rounded-lg text-sm">
-                <p className="font-semibold text-slate-800 dark:text-slate-200 truncate">{resource.id} - {resource.title}</p>
-                <p className="text-xs text-slate-500 dark:text-slate-400 font-mono truncate">{resource.url}</p>
+              <div key={resource.id} className="p-2 bg-slate-50 dark:bg-slate-800/50 rounded-lg flex justify-between items-center text-sm">
+                <div>
+                    <p className="font-semibold text-slate-800 dark:text-slate-200 truncate">{resource.id} - {resource.title}</p>
+                    <p className="text-xs text-slate-500 dark:text-slate-400 font-mono truncate">{resource.url}</p>
+                </div>
+                <button
+                    onClick={() => onDeleteResource(resource.id)}
+                    className="p-1.5 text-rose-500 hover:bg-rose-100 dark:hover:bg-rose-900/50 rounded-full transition-colors flex-shrink-0 ml-2"
+                    aria-label="Delete resource"
+                >
+                    <TrashIcon className="w-4 h-4" />
+                </button>
               </div>
             ))}
           </div>
@@ -301,9 +312,20 @@ export default allResources;
           <div className="max-h-96 overflow-y-auto">
             <ul className="divide-y divide-slate-200 dark:divide-slate-800">
               {[...resources].sort((a, b) => b.id - a.id).map(resource => (
-                <li key={resource.id} className="py-3">
-                  <p className="text-sm font-semibold text-slate-800 dark:text-slate-200">{resource.id} - {resource.title}</p>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 font-mono">{resource.url}</p>
+                <li key={resource.id} className="py-3 flex justify-between items-center group">
+                  <div>
+                    <p className="text-sm font-semibold text-slate-800 dark:text-slate-200">{resource.id} - {resource.title}</p>
+                    <p className="text-xs text-slate-500 dark:text-slate-400 font-mono">{resource.url}</p>
+                  </div>
+                  {userAddedResources.some(r => r.id === resource.id) && (
+                    <button
+                        onClick={() => onDeleteResource(resource.id)}
+                        className="p-2 text-slate-400 hover:text-rose-500 hover:bg-rose-100 dark:hover:bg-rose-900/50 rounded-full transition-colors opacity-0 group-hover:opacity-100"
+                        aria-label="Delete resource"
+                    >
+                        <TrashIcon className="w-4 h-4" />
+                    </button>
+                  )}
                 </li>
               ))}
             </ul>

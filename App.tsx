@@ -184,13 +184,20 @@ const App: React.FC = () => {
     }
   }, [ai]);
 
-  // New resource handler
+  // Admin resource handlers
   const handleAddResource = (newResource: Resource) => {
-    // Add to the live resources state for immediate UI update
     setResources(prev => [newResource, ...prev]);
-
-    // Update the dedicated list of user-added resources and persist to localStorage
     const newAddedList = [newResource, ...userAddedResources];
+    setUserAddedResources(newAddedList);
+    localStorage.setItem('user-resources', JSON.stringify(newAddedList));
+  };
+
+  const handleDeleteResource = (idToDelete: number) => {
+    if (!window.confirm("Are you sure you want to delete this resource? This will remove it from your local additions.")) {
+        return;
+    }
+    setResources(prev => prev.filter(r => r.id !== idToDelete));
+    const newAddedList = userAddedResources.filter(r => r.id !== idToDelete);
     setUserAddedResources(newAddedList);
     localStorage.setItem('user-resources', JSON.stringify(newAddedList));
   };
@@ -257,6 +264,7 @@ const App: React.FC = () => {
                 onAddResource={handleAddResource} 
                 userAddedResources={userAddedResources}
                 originalResources={allResources}
+                onDeleteResource={handleDeleteResource}
             />
         )}
       </div>
