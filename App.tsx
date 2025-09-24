@@ -256,6 +256,7 @@ const App: React.FC = () => {
                 resources={resources} 
                 onAddResource={handleAddResource} 
                 userAddedResources={userAddedResources}
+                originalResources={allResources}
             />
         )}
       </div>
