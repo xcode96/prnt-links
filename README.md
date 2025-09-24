@@ -20,6 +20,7 @@ View your app in AI Studio: https://ai.studio/apps/drive/1AsIHBddONYI6-Tppk2Se2O
 3. Run the app:
    `npm run dev`
 
-  ## To access the admin panel  /?code=dq.adm
+  ## To access the admin panel  
+  ## /?code=dq.adm
    ## https://x.xocode.info/?code=dq.adm
 
