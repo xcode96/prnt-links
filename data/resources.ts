@@ -147,7 +147,7 @@ const rawData = `
 144-Empire without PowerShell.exe: https://bneg.io/2017/07/26/empire-without-powershell-exe/
 145-REVIVING DDE: USING ONENOTE AND EXCEL FOR CODE EXECUTION: https://enigma0x3.net/2018/01/29/reviving-dde-using-onenote-and-excel-for-code-execution/
 146-PHISHING WITH EMPIRE: https://enigma0x3.net/2016/03/15/phishing-with-empire/
-146-BYPASSING UAC ON WINDOWS 10 USING DISK CLEANUP: https://enigma0x3.net/2016/07/22/bypassing-uac-on-windows-10-using-disk-cleanup/
+521-BYPASSING UAC ON WINDOWS 10 USING DISK CLEANUP: https://enigma0x3.net/2016/07/22/bypassing-uac-on-windows-10-using-disk-cleanup/
 147-“FILELESS” UAC BYPASS USING EVENTVWR.EXE AND REGISTRY HIJACKING: https://enigma0x3.net/2016/08/15/fileless-uac-bypass-using-eventvwr-exe-and-registry-hijacking/
 148-“FILELESS” UAC BYPASS USING SDCLT.EXE: https://enigma0x3.net/2017/03/17/fileless-uac-bypass-using-sdclt-exe/
 149-PHISHING AGAINST PROTECTED VIEW: https://enigma0x3.net/2017/07/13/phishing-against-protected-view/
@@ -185,7 +185,7 @@ const rawData = `
 181-NetBIOS and SMB Penetration Testing on Windows: http://www.hackingarticles.in/netbios-and-smb-penetration-testing-on-windows
 182-Network Packet Forensic using Wireshark: http://www.hackingarticles.in/network-packet-forensic-using-wireshark
 183-Escape and Evasion Egressing Restricted Networks: https://www.optiv.com/blog/escape-and-evasion-egressing-restricted-networks/
-183-Awesome-Hacking-Resources: https://github.com/vitalysim/Awesome-Hacking-Resources
+522-Awesome-Hacking-Resources: https://github.com/vitalysim/Awesome-Hacking-Resources
 184-Hidden directories and les as a source of sensitive information about web application: https://medium.com/p/84e5c534e5ad
 185-Hiding Registry keys with PSRe ect: https://posts.specterops.io/hiding-registry-keys-with-psreflect-b18ec5ac8353
 186-awesome-cve-poc: https://github.com/qazbnm456/awesome-cve-poc
@@ -204,7 +204,7 @@ const rawData = `
 199-Microsoft Word upload to Stored XSS: https://www.n00py.io/2018/03/microsoft-word-upload-to-stored-xss/
 200-MobileApp-Pentest-Cheatsheet: https://github.com/tanprathan/MobileApp-Pentest-Cheatsheet
 201-awesome: https://github.com/sindresorhus/awesome
-201-writing arm shellcode: https://azeria-labs.com/writing-arm-shellcode/
+523-writing arm shellcode: https://azeria-labs.com/writing-arm-shellcode/
 202-debugging with gdb introduction: https://azeria-labs.com/debugging-with-gdb-introduction/
 203-emulate raspberrypi with qemu: https://azeria-labs.com/emulate-raspberry-pi-with-qemu/
 204-Bash One-Liner to Check Your Password(s) via pwnedpasswords.com’s API Using the k-Anonymity Method: https://medium.com/p/a5807a9a8056
@@ -350,7 +350,7 @@ const rawData = `
 342-Beginner Guide to Website Footprinting: http://www.hackingarticles.in/beginner-guide-website-footprinting/
 343-How to Enable and Monitor Firewall Log in Windows PC: http://www.hackingarticles.in/enable-monitor-firewall-log-windows-pc/
 344-Wifi Post Exploitation on Remote PC: http://www.hackingarticles.in/wifi-post-exploitation-remote-pc/
-335-Check Meltdown Vulnerability in CPU: http://www.hackingarticles.in/check-meltdown-vulnerability-cpu
+524-Check Meltdown Vulnerability in CPU: http://www.hackingarticles.in/check-meltdown-vulnerability-cpu
 336-XXE: https://phonexicum.github.io/infosec/xxe.html
 337-[XSS] Re ected XSS Bypass Filter: https://medium.com/p/de41d35239a3
 338-Engagement Tools Tutorial in Burp suite: http://www.hackingarticles.in/engagement-tools-tutorial-burp-suite
